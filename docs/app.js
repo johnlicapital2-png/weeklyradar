@@ -24,6 +24,7 @@
     renderHeatmap();
     renderCombos();
     renderGuru();
+    renderValuations();
     renderSignals();
     setupFilters();
   }
@@ -207,6 +208,126 @@
     if (v >= 1e6) return (v / 1e6).toFixed(0) + 'M';
     if (v >= 1e3) return (v / 1e3).toFixed(0) + 'K';
     return v.toString();
+  }
+
+  // ── Valuations ──
+  let valFilter = 'all';
+
+  function renderValuations() {
+    const val = DATA.valuations;
+    const section = document.getElementById('valuation-section');
+    if (!val || !val.stocks || !val.stocks.length) { section.classList.add('hidden'); return; }
+    section.classList.remove('hidden');
+
+    // Filters
+    const filtersEl = document.getElementById('valuation-filters');
+    if (!filtersEl.children.length) {
+      ['Deep Value Only', 'Undervalued', 'All', 'Overvalued'].forEach(label => {
+        const key = label === 'Deep Value Only' ? 'deep_value' : label === 'Undervalued' ? 'undervalued' : label === 'Overvalued' ? 'overvalued' : 'all';
+        const btn = document.createElement('button');
+        btn.className = 'filter-btn' + (key === 'all' ? ' active' : '');
+        btn.textContent = label;
+        btn.addEventListener('click', () => {
+          valFilter = key;
+          filtersEl.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+          btn.classList.add('active');
+          renderValuations();
+        });
+        filtersEl.appendChild(btn);
+      });
+    }
+
+    const tbody = document.querySelector('#valuation-table tbody');
+    tbody.innerHTML = '';
+    let stocks = [...val.stocks];
+
+    if (valFilter === 'deep_value') stocks = stocks.filter(s => s.signal === 'deep_value');
+    else if (valFilter === 'undervalued') stocks = stocks.filter(s => s.signal === 'undervalued' || s.signal === 'deep_value');
+    else if (valFilter === 'overvalued') stocks = stocks.filter(s => s.signal === 'overvalued' || s.signal === 'extreme_premium');
+
+    applySortToArray(stocks, 'valuation');
+    if (!sortState['valuation']) stocks.sort((a, b) => -(a.discount_pct || -999) + (b.discount_pct || -999));
+
+    stocks.forEach(s => {
+      const dp = s.discount_pct || 0;
+      const rowClass = s.signal === 'deep_value' ? 'val-deep-value' : s.signal === 'undervalued' ? 'val-undervalued' : s.signal === 'overvalued' ? 'val-overvalued' : s.signal === 'extreme_premium' ? 'val-extreme-premium' : '';
+      const discClass = dp >= 30 ? 'disc-deep' : dp >= 15 ? 'disc-under' : dp >= -15 ? 'disc-fair' : dp >= -30 ? 'disc-over' : 'disc-extreme';
+
+      const tr = document.createElement('tr');
+      tr.className = rowClass;
+      tr.innerHTML = `
+        <td><strong>${s.ticker}</strong></td>
+        <td class="num">$${s.price ? s.price.toFixed(2) : '—'}</td>
+        <td class="num">$${s.composite_intrinsic ? s.composite_intrinsic.toFixed(2) : '—'}</td>
+        <td class="num val-discount ${discClass}">${dp >= 0 ? '+' : ''}${dp.toFixed(1)}%</td>
+        <td>${s.signal_label || '—'}</td>
+        <td class="num hide-mobile">${s.dcf_value ? '$' + s.dcf_value.toFixed(0) : '—'}</td>
+        <td class="num hide-mobile">${s.epv_value ? '$' + s.epv_value.toFixed(0) : '—'}</td>
+        <td class="num hide-mobile">${s.hist_pe_value ? '$' + s.hist_pe_value.toFixed(0) : '—'}</td>
+        <td class="num hide-mobile">${s.implied_growth != null ? (s.implied_growth * 100).toFixed(1) + '%' : '—'}</td>
+      `;
+      tr.addEventListener('click', () => openValDetail(s));
+      tbody.appendChild(tr);
+    });
+
+    setupTableSort('#valuation-table', 'valuation', renderValuations);
+  }
+
+  function openValDetail(s) {
+    const panel = document.getElementById('detail-panel');
+    const content = document.getElementById('detail-content');
+
+    const fmtB = v => v ? '$' + (Math.abs(v) >= 1e9 ? (v/1e9).toFixed(2) + 'B' : (v/1e6).toFixed(0) + 'M') : '—';
+    const dp = s.discount_pct || 0;
+    const discClass = dp >= 30 ? 'disc-deep' : dp >= 15 ? 'disc-under' : dp >= -15 ? 'disc-fair' : dp >= -30 ? 'disc-over' : 'disc-extreme';
+
+    let html = `
+      <div class="detail-ticker">${s.ticker}</div>
+      <div class="detail-category">${s.name || ''}</div>
+      <div class="detail-grid">
+        <div class="detail-stat"><div class="label">Price</div><div class="value">$${s.price?.toFixed(2) || '—'}</div></div>
+        <div class="detail-stat"><div class="label">Intrinsic Value</div><div class="value val-discount ${discClass}">$${s.composite_intrinsic?.toFixed(2) || '—'}</div></div>
+        <div class="detail-stat"><div class="label">Discount</div><div class="value val-discount ${discClass}">${dp >= 0 ? '+' : ''}${dp.toFixed(1)}%</div></div>
+        <div class="detail-stat"><div class="label">Signal</div><div class="value">${s.signal_label || '—'}</div></div>
+      </div>
+    `;
+
+    // Key inputs
+    html += `<div class="val-detail-section"><h4>📊 Key Inputs</h4>`;
+    html += `<div class="val-detail-row"><span class="vd-label">WACC</span><span class="vd-value">${s.wacc ? (s.wacc*100).toFixed(1) + '%' : '—'}</span></div>`;
+    html += `<div class="val-detail-row"><span class="vd-label">Beta</span><span class="vd-value">${s.beta?.toFixed(2) || '—'}</span></div>`;
+    html += `<div class="val-detail-row"><span class="vd-label">FCF</span><span class="vd-value">${fmtB(s.fcf)}</span></div>`;
+    html += `<div class="val-detail-row"><span class="vd-label">Growth Rate</span><span class="vd-value">${s.growth_rate ? (s.growth_rate*100).toFixed(1) + '% (' + s.growth_source + ')' : '—'}</span></div>`;
+    html += `<div class="val-detail-row"><span class="vd-label">Market Cap</span><span class="vd-value">${fmtB(s.market_cap)}</span></div>`;
+    html += `</div>`;
+
+    // Method breakdown
+    html += `<div class="val-detail-section"><h4>📐 Valuation Methods</h4>`;
+    html += `<div class="val-detail-row"><span class="vd-label">DCF</span><span class="vd-value">${s.dcf_value ? '$' + s.dcf_value.toFixed(2) : 'N/A'}</span></div>`;
+    html += `<div class="val-detail-row"><span class="vd-label">EPV (no-growth)</span><span class="vd-value">${s.epv_value ? '$' + s.epv_value.toFixed(2) : 'N/A'}</span></div>`;
+    html += `<div class="val-detail-row"><span class="vd-label">Historical P/E</span><span class="vd-value">${s.hist_pe_value ? '$' + s.hist_pe_value.toFixed(2) : 'N/A'}</span></div>`;
+    if (s.current_pe || s.estimated_avg_pe) {
+      html += `<div class="val-detail-row"><span class="vd-label">P/E (current → avg)</span><span class="vd-value">${s.current_pe?.toFixed(1) || '?'} → ${s.estimated_avg_pe?.toFixed(1) || '?'}</span></div>`;
+    }
+    html += `</div>`;
+
+    // Reverse DCF
+    if (s.implied_growth != null) {
+      html += `<div class="val-detail-section"><h4>🔄 Reverse DCF</h4>`;
+      html += `<div class="val-detail-row"><span class="vd-label">Implied Growth</span><span class="vd-value">${(s.implied_growth*100).toFixed(1)}%</span></div>`;
+      if (s.implied_growth_interp) {
+        html += `<div class="val-interp">${s.implied_growth_interp}</div>`;
+      }
+      if (s.growth_rate && s.implied_growth < 0 && s.growth_rate > 0.05) {
+        html += `<div class="val-interp">💡 Market implies ${(s.implied_growth*100).toFixed(1)}% growth — unlikely for a company growing at ${(s.growth_rate*100).toFixed(0)}%</div>`;
+      }
+      html += `</div>`;
+    }
+
+    html += `<div style="margin-top:1rem;font-size:.75rem;color:var(--text-dim)">Methods used: ${s.methods_used} · Composite = average of available methods</div>`;
+
+    content.innerHTML = html;
+    panel.classList.add('open');
   }
 
   // ── Signals Table ──

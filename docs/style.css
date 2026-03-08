@@ -256,6 +256,36 @@ tbody tr:last-child td { border-bottom: none; }
 #guru-watchlist-matrix .wl-multi { background: rgba(212,160,23,.1); }
 #guru-watchlist-matrix td.wl-value { font-family: var(--mono); font-size: .75rem; text-align: center; }
 
+/* ===== VALUATION SECTION ===== */
+#valuation-filters { display: flex; flex-wrap: wrap; gap: .4rem; margin-bottom: 1rem; }
+
+.val-deep-value { background: rgba(34,197,94,.25) !important; }
+.val-deep-value td { color: #4ade80; }
+.val-deep-value td:first-child { border-left: 3px solid var(--green); }
+
+.val-undervalued { background: rgba(34,197,94,.1) !important; }
+
+.val-overvalued { background: rgba(245,158,11,.08) !important; }
+.val-overvalued td.val-discount { color: var(--orange); }
+
+.val-extreme-premium { background: rgba(239,68,68,.1) !important; }
+.val-extreme-premium td.val-discount { color: var(--red); }
+
+td.val-discount { font-weight: 700; }
+td.val-discount.disc-deep { color: #4ade80; text-shadow: 0 0 8px rgba(34,197,94,.4); }
+td.val-discount.disc-under { color: var(--green); }
+td.val-discount.disc-fair { color: var(--text-dim); }
+td.val-discount.disc-over { color: var(--orange); }
+td.val-discount.disc-extreme { color: var(--red); text-shadow: 0 0 8px rgba(239,68,68,.3); }
+
+/* Valuation detail panel */
+.val-detail-section { margin-top: 1.2rem; }
+.val-detail-section h4 { font-size: .85rem; color: var(--text-dim); margin-bottom: .4rem; }
+.val-detail-row { display: flex; justify-content: space-between; padding: .25rem 0; font-size: .85rem; border-bottom: 1px solid rgba(38,53,69,.4); }
+.val-detail-row .vd-label { color: var(--text-dim); }
+.val-detail-row .vd-value { font-family: var(--mono); }
+.val-interp { font-size: .8rem; color: var(--yellow); font-style: italic; margin-top: .3rem; padding: .4rem .6rem; background: rgba(234,179,8,.08); border-radius: 4px; }
+
 /* ===== FOOTER ===== */
 footer {
   text-align: center;
