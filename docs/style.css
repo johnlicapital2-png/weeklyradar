@@ -185,6 +185,77 @@ tbody tr:last-child td { border-bottom: none; }
 }
 .spark-bar:last-child { opacity: 1; }
 
+/* ===== GURU 13F SECTION ===== */
+#guru-clusters { margin-bottom: 1.5rem; }
+#guru-clusters .cluster-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: .8rem; }
+.cluster-card {
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--green);
+  border-radius: var(--radius);
+  padding: .8rem 1rem;
+}
+.cluster-card.critical { border-left-color: var(--gold); }
+.cluster-card .cluster-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: .4rem; }
+.cluster-card .cluster-issuer { font-weight: 700; font-size: .95rem; }
+.cluster-card .cluster-ticker { font-family: var(--mono); color: var(--accent); font-size: .82rem; }
+.cluster-card .cluster-gurus { font-size: .78rem; color: var(--text-dim); }
+.cluster-card .badge-critical { background: rgba(212,160,23,.25); color: var(--gold); }
+.cluster-card .badge-guru-count { background: rgba(59,130,246,.15); color: var(--accent); font-size: .7rem; }
+
+#guru-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(380px, 1fr)); gap: 1rem; margin-bottom: 1.5rem; }
+.guru-card {
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+.guru-card .guru-header {
+  background: var(--bg3);
+  padding: .8rem 1rem;
+  display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: .3rem;
+  border-bottom: 1px solid var(--border);
+}
+.guru-card .guru-name { font-weight: 700; font-size: 1rem; }
+.guru-card .guru-meta { font-size: .75rem; color: var(--text-dim); text-align: right; }
+.guru-card .guru-meta span { display: block; }
+.guru-card .guru-holdings { padding: 0; }
+.guru-card .guru-holdings table { width: 100%; border-collapse: collapse; }
+.guru-card .guru-holdings th {
+  background: transparent; padding: .4rem .6rem; font-size: .68rem;
+  text-transform: uppercase; letter-spacing: .04em; color: var(--text-dim);
+  border-bottom: 1px solid var(--border); text-align: left;
+}
+.guru-card .guru-holdings th:nth-child(2),
+.guru-card .guru-holdings th:nth-child(3) { text-align: right; }
+.guru-card .guru-holdings td { padding: .35rem .6rem; font-size: .82rem; border-bottom: 1px solid rgba(38,53,69,.5); }
+.guru-card .guru-holdings td:nth-child(2),
+.guru-card .guru-holdings td:nth-child(3) { text-align: right; font-family: var(--mono); font-size: .78rem; }
+.guru-card .guru-holdings tr.watchlist-hit td { background: rgba(59,130,246,.08); }
+.guru-card .guru-holdings tr.watchlist-hit td:first-child { border-left: 2px solid var(--accent); }
+.guru-card .guru-holdings tr.guru-hidden { display: none; }
+.guru-card .guru-expand {
+  display: block; width: 100%; background: var(--bg3); border: none; border-top: 1px solid var(--border);
+  color: var(--text-dim); padding: .45rem; font-size: .75rem; cursor: pointer; text-align: center;
+}
+.guru-card .guru-expand:hover { color: var(--text); background: var(--bg2); }
+.guru-card .guru-alerts { padding: .5rem .8rem; display: flex; flex-wrap: wrap; gap: .3rem; }
+.guru-alert-badge {
+  display: inline-block; padding: .15rem .5rem; border-radius: 4px;
+  font-size: .7rem; font-weight: 600; white-space: nowrap;
+}
+.guru-alert-new { background: rgba(34,197,94,.2); color: #4ade80; }
+.guru-alert-exit { background: rgba(239,68,68,.2); color: #f87171; }
+.guru-alert-doubled { background: rgba(234,179,8,.2); color: #facc15; }
+
+#guru-watchlist-matrix { margin-top: 1rem; }
+#guru-watchlist-matrix h3 { font-size: .9rem; font-weight: 600; margin-bottom: .6rem; color: var(--text-dim); }
+#guru-watchlist-matrix table { font-size: .8rem; }
+#guru-watchlist-matrix td, #guru-watchlist-matrix th { padding: .4rem .6rem; white-space: nowrap; }
+#guru-watchlist-matrix .wl-hit { color: var(--green); }
+#guru-watchlist-matrix .wl-multi { background: rgba(212,160,23,.1); }
+#guru-watchlist-matrix td.wl-value { font-family: var(--mono); font-size: .75rem; text-align: center; }
+
 /* ===== FOOTER ===== */
 footer {
   text-align: center;

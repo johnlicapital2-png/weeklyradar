@@ -1,5 +1,5 @@
 {
-  "scan_time": "2026-03-08 22:31 UTC",
+  "scan_time": "2026-03-08 22:38 UTC",
   "next_scan": "2026-03-15",
   "heatmap": [
     {
@@ -2121,31 +2121,747 @@
     }
   },
   "previous_signaled": [
+    "GLD",
+    "GDX",
+    "UVXY",
+    "HYG",
+    "GDXJ",
+    "DBC",
+    "BITO",
+    "CRM",
+    "TIP",
+    "XLRE",
+    "AMZN",
+    "UNH",
+    "VGLT",
+    "XLE",
+    "WEAT",
+    "XLU",
+    "COIN",
+    "EEM",
+    "^VIX",
+    "MSFT",
     "UBER",
     "USO",
-    "XLI",
-    "VGLT",
-    "COIN",
-    "DBC",
-    "TIP",
-    "WEAT",
-    "MSFT",
-    "UVXY",
-    "XLE",
     "TLT",
-    "SLV",
-    "GDX",
-    "GLD",
-    "XLRE",
-    "GDXJ",
-    "UNH",
-    "XLU",
-    "CRM",
-    "HYG",
     "XOP",
-    "BITO",
-    "AMZN",
-    "EEM",
-    "^VIX"
-  ]
+    "XLI",
+    "SLV"
+  ],
+  "guru_activity": {
+    "portfolios": [
+      {
+        "name": "Berkshire Hathaway (Buffett)",
+        "cik": "0001067983",
+        "filing_date": "2025-08-14",
+        "total_value": 257521776925,
+        "num_positions": 37,
+        "top10": [
+          {
+            "issuer": "APPLE INC",
+            "ticker": "AAPL",
+            "shares": 280000000,
+            "value": 57447600000,
+            "weight": 22.3,
+            "on_watchlist": true
+          },
+          {
+            "issuer": "AMERICAN EXPRESS CO",
+            "ticker": "AXP",
+            "shares": 151610700,
+            "value": 48360781086,
+            "weight": 18.8,
+            "on_watchlist": true
+          },
+          {
+            "issuer": "BANK AMER CORP",
+            "ticker": "BAC",
+            "shares": 605267375,
+            "value": 28641252185,
+            "weight": 11.1,
+            "on_watchlist": false
+          },
+          {
+            "issuer": "COCA COLA CO",
+            "ticker": "KO",
+            "shares": 400000000,
+            "value": 28300000000,
+            "weight": 11.0,
+            "on_watchlist": false
+          },
+          {
+            "issuer": "CHEVRON CORP NEW",
+            "ticker": "CVX",
+            "shares": 122064792,
+            "value": 17478457567,
+            "weight": 6.8,
+            "on_watchlist": false
+          },
+          {
+            "issuer": "MOODYS CORP",
+            "ticker": "",
+            "shares": 24669778,
+            "value": 12374113948,
+            "weight": 4.8,
+            "on_watchlist": false
+          },
+          {
+            "issuer": "OCCIDENTAL PETE CORP",
+            "ticker": "OXY",
+            "shares": 264941431,
+            "value": 11130189516,
+            "weight": 4.3,
+            "on_watchlist": false
+          },
+          {
+            "issuer": "KRAFT HEINZ CO",
+            "ticker": "KHC",
+            "shares": 325634818,
+            "value": 8407891001,
+            "weight": 3.3,
+            "on_watchlist": false
+          },
+          {
+            "issuer": "CHUBB LIMITED",
+            "ticker": "",
+            "shares": 27033784,
+            "value": 7832227900,
+            "weight": 3.0,
+            "on_watchlist": false
+          },
+          {
+            "issuer": "DAVITA INC",
+            "ticker": "DVA",
+            "shares": 33796541,
+            "value": 4814317266,
+            "weight": 1.9,
+            "on_watchlist": false
+          }
+        ],
+        "alerts": []
+      },
+      {
+        "name": "Pershing Square (Ackman)",
+        "cik": "0001336528",
+        "filing_date": "2025-08-14",
+        "total_value": 13729120533,
+        "num_positions": 10,
+        "top10": [
+          {
+            "issuer": "UBER TECHNOLOGIES INC",
+            "ticker": "UBER",
+            "shares": 30301161,
+            "value": 2827098321,
+            "weight": 20.6,
+            "on_watchlist": true
+          },
+          {
+            "issuer": "BROOKFIELD CORP",
+            "ticker": "BN",
+            "shares": 41160397,
+            "value": 2545770554,
+            "weight": 18.5,
+            "on_watchlist": false
+          },
+          {
+            "issuer": "ALPHABET INC",
+            "ticker": "GOOG",
+            "shares": 11687011,
+            "value": 2066937824,
+            "weight": 15.1,
+            "on_watchlist": true
+          },
+          {
+            "issuer": "RESTAURANT BRANDS INTL INC",
+            "ticker": "QSR",
+            "shares": 23000914,
+            "value": 1524730589,
+            "weight": 11.1,
+            "on_watchlist": false
+          },
+          {
+            "issuer": "AMAZON COM INC",
+            "ticker": "AMZN",
+            "shares": 5823316,
+            "value": 1277577297,
+            "weight": 9.3,
+            "on_watchlist": true
+          },
+          {
+            "issuer": "HOWARD HUGHES HOLDINGS INC",
+            "ticker": "",
+            "shares": 18852064,
+            "value": 1272514320,
+            "weight": 9.3,
+            "on_watchlist": false
+          },
+          {
+            "issuer": "CHIPOTLE MEXICAN GRILL INC",
+            "ticker": "CMG",
+            "shares": 21541177,
+            "value": 1209537089,
+            "weight": 8.8,
+            "on_watchlist": false
+          },
+          {
+            "issuer": "HILTON WORLDWIDE HLDGS INC",
+            "ticker": "HLT",
+            "shares": 3030578,
+            "value": 807164145,
+            "weight": 5.9,
+            "on_watchlist": false
+          },
+          {
+            "issuer": "HERTZ GLOBAL HLDGS INC",
+            "ticker": "",
+            "shares": 15241127,
+            "value": 104096897,
+            "weight": 0.8,
+            "on_watchlist": false
+          },
+          {
+            "issuer": "SEAPORT ENTMT GROUP INC",
+            "ticker": "",
+            "shares": 5023780,
+            "value": 93693497,
+            "weight": 0.7,
+            "on_watchlist": false
+          }
+        ],
+        "alerts": []
+      },
+      {
+        "name": "Scion Asset (Burry)",
+        "cik": "0001649339",
+        "filing_date": "2025-08-14",
+        "total_value": 578337040,
+        "num_positions": 11,
+        "top10": [
+          {
+            "issuer": "UNITEDHEALTH GROUP INC",
+            "ticker": "UNH",
+            "shares": 370000,
+            "value": 115428900,
+            "weight": 20.0,
+            "on_watchlist": true
+          },
+          {
+            "issuer": "REGENERON PHARMACEUTICALS",
+            "ticker": "",
+            "shares": 215000,
+            "value": 112875000,
+            "weight": 19.5,
+            "on_watchlist": false
+          },
+          {
+            "issuer": "LULULEMON ATHLETICA INC",
+            "ticker": "",
+            "shares": 450000,
+            "value": 106911000,
+            "weight": 18.5,
+            "on_watchlist": false
+          },
+          {
+            "issuer": "META PLATFORMS INC",
+            "ticker": "META",
+            "shares": 100000,
+            "value": 73809000,
+            "weight": 12.8,
+            "on_watchlist": true
+          },
+          {
+            "issuer": "LAUDER ESTEE COS INC",
+            "ticker": "",
+            "shares": 650000,
+            "value": 52520000,
+            "weight": 9.1,
+            "on_watchlist": false
+          },
+          {
+            "issuer": "JD.COM INC",
+            "ticker": "",
+            "shares": 1000000,
+            "value": 32640000,
+            "weight": 5.6,
+            "on_watchlist": false
+          },
+          {
+            "issuer": "ALIBABA GROUP HLDG LTD",
+            "ticker": "BABA",
+            "shares": 250000,
+            "value": 28352500,
+            "weight": 4.9,
+            "on_watchlist": false
+          },
+          {
+            "issuer": "ASML HOLDING N V",
+            "ticker": "",
+            "shares": 25000,
+            "value": 20034750,
+            "weight": 3.5,
+            "on_watchlist": false
+          },
+          {
+            "issuer": "V F CORP",
+            "ticker": "",
+            "shares": 1500000,
+            "value": 17625000,
+            "weight": 3.0,
+            "on_watchlist": false
+          },
+          {
+            "issuer": "BRUKER CORP",
+            "ticker": "",
+            "shares": 250000,
+            "value": 10300000,
+            "weight": 1.8,
+            "on_watchlist": false
+          }
+        ],
+        "alerts": []
+      },
+      {
+        "name": "Appaloosa (Tepper)",
+        "cik": "0001656456",
+        "filing_date": "2025-08-14",
+        "total_value": 6448959614,
+        "num_positions": 38,
+        "top10": [
+          {
+            "issuer": "ALIBABA GROUP HLDG LTD",
+            "ticker": "BABA",
+            "shares": 7067271,
+            "value": 801499204,
+            "weight": 12.4,
+            "on_watchlist": false
+          },
+          {
+            "issuer": "UNITEDHEALTH GROUP INC",
+            "ticker": "UNH",
+            "shares": 2450000,
+            "value": 764326500,
+            "weight": 11.9,
+            "on_watchlist": true
+          },
+          {
+            "issuer": "AMAZON COM INC",
+            "ticker": "AMZN",
+            "shares": 2700000,
+            "value": 592353000,
+            "weight": 9.2,
+            "on_watchlist": true
+          },
+          {
+            "issuer": "VISTRA CORP",
+            "ticker": "",
+            "shares": 1800000,
+            "value": 348858000,
+            "weight": 5.4,
+            "on_watchlist": false
+          },
+          {
+            "issuer": "NRG ENERGY INC",
+            "ticker": "",
+            "shares": 1980000,
+            "value": 317948400,
+            "weight": 4.9,
+            "on_watchlist": false
+          },
+          {
+            "issuer": "META PLATFORMS INC",
+            "ticker": "META",
+            "shares": 400000,
+            "value": 295236000,
+            "weight": 4.6,
+            "on_watchlist": true
+          },
+          {
+            "issuer": "NVIDIA CORPORATION",
+            "ticker": "",
+            "shares": 1750000,
+            "value": 276482500,
+            "weight": 4.3,
+            "on_watchlist": false
+          },
+          {
+            "issuer": "ALPHABET INC",
+            "ticker": "GOOG",
+            "shares": 1500000,
+            "value": 266085000,
+            "weight": 4.1,
+            "on_watchlist": true
+          },
+          {
+            "issuer": "UBER TECHNOLOGIES INC",
+            "ticker": "UBER",
+            "shares": 2750000,
+            "value": 256575000,
+            "weight": 4.0,
+            "on_watchlist": true
+          },
+          {
+            "issuer": "MICROSOFT CORP",
+            "ticker": "MSFT",
+            "shares": 500000,
+            "value": 248705000,
+            "weight": 3.9,
+            "on_watchlist": true
+          }
+        ],
+        "alerts": []
+      },
+      {
+        "name": "Third Point (Loeb)",
+        "cik": "0001040273",
+        "filing_date": "2025-08-14",
+        "total_value": 7620034147,
+        "num_positions": 46,
+        "top10": [
+          {
+            "issuer": "PG&E CORP",
+            "ticker": "",
+            "shares": 61240000,
+            "value": 727526534,
+            "weight": 9.5,
+            "on_watchlist": false
+          },
+          {
+            "issuer": "AMAZON COM INC",
+            "ticker": "AMZN",
+            "shares": 2710000,
+            "value": 594546900,
+            "weight": 7.8,
+            "on_watchlist": true
+          },
+          {
+            "issuer": "NVIDIA CORPORATION",
+            "ticker": "",
+            "shares": 2800000,
+            "value": 442372000,
+            "weight": 5.8,
+            "on_watchlist": false
+          },
+          {
+            "issuer": "CAPITAL ONE FINL CORP",
+            "ticker": "",
+            "shares": 1804204,
+            "value": 383862443,
+            "weight": 5.0,
+            "on_watchlist": false
+          },
+          {
+            "issuer": "TAIWAN SEMICONDUCTOR MFG LTD",
+            "ticker": "",
+            "shares": 1430000,
+            "value": 323880700,
+            "weight": 4.3,
+            "on_watchlist": false
+          },
+          {
+            "issuer": "FLUTTER ENTMT PLC",
+            "ticker": "",
+            "shares": 1070000,
+            "value": 305763200,
+            "weight": 4.0,
+            "on_watchlist": false
+          },
+          {
+            "issuer": "LIVE NATION ENTERTAINMENT IN",
+            "ticker": "",
+            "shares": 1975000,
+            "value": 298778000,
+            "weight": 3.9,
+            "on_watchlist": false
+          },
+          {
+            "issuer": "BROOKFIELD CORP",
+            "ticker": "BN",
+            "shares": 4675000,
+            "value": 289148750,
+            "weight": 3.8,
+            "on_watchlist": false
+          },
+          {
+            "issuer": "APOLLO GLOBAL MGMT INC",
+            "ticker": "",
+            "shares": 2175000,
+            "value": 248249250,
+            "weight": 3.3,
+            "on_watchlist": false
+          },
+          {
+            "issuer": "COSTAR GROUP INC",
+            "ticker": "",
+            "shares": 3085000,
+            "value": 248034000,
+            "weight": 3.3,
+            "on_watchlist": false
+          }
+        ],
+        "alerts": []
+      }
+    ],
+    "clusters": [
+      {
+        "issuer": "AMAZON COM INC",
+        "ticker": "AMZN",
+        "guru_count": 4,
+        "gurus": [
+          "Berkshire Hathaway (Buffett)",
+          "Pershing Square (Ackman)",
+          "Appaloosa (Tepper)",
+          "Third Point (Loeb)"
+        ],
+        "total_value": 4658377197,
+        "critical": true
+      },
+      {
+        "issuer": "UNITEDHEALTH GROUP INC",
+        "ticker": "UNH",
+        "guru_count": 3,
+        "gurus": [
+          "Berkshire Hathaway (Buffett)",
+          "Scion Asset (Burry)",
+          "Appaloosa (Tepper)"
+        ],
+        "total_value": 2451948181,
+        "critical": true
+      },
+      {
+        "issuer": "META PLATFORMS INC",
+        "ticker": "META",
+        "guru_count": 3,
+        "gurus": [
+          "Scion Asset (Burry)",
+          "Appaloosa (Tepper)",
+          "Third Point (Loeb)"
+        ],
+        "total_value": 479758500,
+        "critical": true
+      },
+      {
+        "issuer": "UBER TECHNOLOGIES INC",
+        "ticker": "UBER",
+        "guru_count": 2,
+        "gurus": [
+          "Pershing Square (Ackman)",
+          "Appaloosa (Tepper)"
+        ],
+        "total_value": 3083673321,
+        "critical": false
+      },
+      {
+        "issuer": "BROOKFIELD CORP",
+        "ticker": "BN",
+        "guru_count": 2,
+        "gurus": [
+          "Pershing Square (Ackman)",
+          "Third Point (Loeb)"
+        ],
+        "total_value": 2834919304,
+        "critical": false
+      },
+      {
+        "issuer": "ALPHABET INC",
+        "ticker": "GOOG",
+        "guru_count": 2,
+        "gurus": [
+          "Pershing Square (Ackman)",
+          "Appaloosa (Tepper)"
+        ],
+        "total_value": 2333022824,
+        "critical": false
+      },
+      {
+        "issuer": "CAPITAL ONE FINL CORP",
+        "ticker": "",
+        "guru_count": 2,
+        "gurus": [
+          "Berkshire Hathaway (Buffett)",
+          "Third Point (Loeb)"
+        ],
+        "total_value": 1905096443,
+        "critical": false
+      },
+      {
+        "issuer": "ALIBABA GROUP HLDG LTD",
+        "ticker": "BABA",
+        "guru_count": 2,
+        "gurus": [
+          "Scion Asset (Burry)",
+          "Appaloosa (Tepper)"
+        ],
+        "total_value": 829851704,
+        "critical": false
+      },
+      {
+        "issuer": "NVIDIA CORPORATION",
+        "ticker": "",
+        "guru_count": 2,
+        "gurus": [
+          "Appaloosa (Tepper)",
+          "Third Point (Loeb)"
+        ],
+        "total_value": 718854500,
+        "critical": false
+      },
+      {
+        "issuer": "VISTRA CORP",
+        "ticker": "",
+        "guru_count": 2,
+        "gurus": [
+          "Appaloosa (Tepper)",
+          "Third Point (Loeb)"
+        ],
+        "total_value": 591120500,
+        "critical": false
+      },
+      {
+        "issuer": "TAIWAN SEMICONDUCTOR MFG LTD",
+        "ticker": "",
+        "guru_count": 2,
+        "gurus": [
+          "Appaloosa (Tepper)",
+          "Third Point (Loeb)"
+        ],
+        "total_value": 556032950,
+        "critical": false
+      },
+      {
+        "issuer": "MICROSOFT CORP",
+        "ticker": "MSFT",
+        "guru_count": 2,
+        "gurus": [
+          "Appaloosa (Tepper)",
+          "Third Point (Loeb)"
+        ],
+        "total_value": 447669000,
+        "critical": false
+      },
+      {
+        "issuer": "JD.COM INC",
+        "ticker": "",
+        "guru_count": 2,
+        "gurus": [
+          "Scion Asset (Burry)",
+          "Appaloosa (Tepper)"
+        ],
+        "total_value": 261120000,
+        "critical": false
+      },
+      {
+        "issuer": "HERTZ GLOBAL HLDGS INC",
+        "ticker": "",
+        "guru_count": 2,
+        "gurus": [
+          "Pershing Square (Ackman)",
+          "Third Point (Loeb)"
+        ],
+        "total_value": 118587397,
+        "critical": false
+      },
+      {
+        "issuer": "ASML HOLDING N V",
+        "ticker": "",
+        "guru_count": 2,
+        "gurus": [
+          "Scion Asset (Burry)",
+          "Appaloosa (Tepper)"
+        ],
+        "total_value": 76132050,
+        "critical": false
+      }
+    ],
+    "watchlist_overlap": [
+      {
+        "ticker": "AMZN",
+        "held_by": {
+          "Berkshire Hathaway (Buffett)": 2193900000,
+          "Pershing Square (Ackman)": 1277577297,
+          "Appaloosa (Tepper)": 592353000,
+          "Third Point (Loeb)": 594546900
+        },
+        "guru_count": 4
+      },
+      {
+        "ticker": "META",
+        "held_by": {
+          "Scion Asset (Burry)": 73809000,
+          "Appaloosa (Tepper)": 295236000,
+          "Third Point (Loeb)": 110713500
+        },
+        "guru_count": 3
+      },
+      {
+        "ticker": "UNH",
+        "held_by": {
+          "Berkshire Hathaway (Buffett)": 1572192781,
+          "Scion Asset (Burry)": 115428900,
+          "Appaloosa (Tepper)": 764326500
+        },
+        "guru_count": 3
+      },
+      {
+        "ticker": "GOOG",
+        "held_by": {
+          "Pershing Square (Ackman)": 2066937824,
+          "Appaloosa (Tepper)": 266085000
+        },
+        "guru_count": 2
+      },
+      {
+        "ticker": "MSFT",
+        "held_by": {
+          "Appaloosa (Tepper)": 248705000,
+          "Third Point (Loeb)": 198964000
+        },
+        "guru_count": 2
+      },
+      {
+        "ticker": "UBER",
+        "held_by": {
+          "Pershing Square (Ackman)": 2827098321,
+          "Appaloosa (Tepper)": 256575000
+        },
+        "guru_count": 2
+      },
+      {
+        "ticker": "AXP",
+        "held_by": {
+          "Berkshire Hathaway (Buffett)": 48360781086
+        },
+        "guru_count": 1
+      },
+      {
+        "ticker": "ORCL",
+        "held_by": {
+          "Appaloosa (Tepper)": 32794500
+        },
+        "guru_count": 1
+      },
+      {
+        "ticker": "AAPL",
+        "held_by": {
+          "Berkshire Hathaway (Buffett)": 57447600000
+        },
+        "guru_count": 1
+      },
+      {
+        "ticker": "V",
+        "held_by": {
+          "Berkshire Hathaway (Buffett)": 2946013173
+        },
+        "guru_count": 1
+      }
+    ],
+    "guru_names": [
+      "Berkshire Hathaway (Buffett)",
+      "Pershing Square (Ackman)",
+      "Scion Asset (Burry)",
+      "Appaloosa (Tepper)",
+      "Baupost (Klarman)",
+      "Greenlight (Einhorn)",
+      "Third Point (Loeb)"
+    ]
+  }
 }

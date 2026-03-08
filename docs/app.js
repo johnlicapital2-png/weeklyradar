@@ -23,6 +23,7 @@
     renderHeader();
     renderHeatmap();
     renderCombos();
+    renderGuru();
     renderSignals();
     setupFilters();
   }
@@ -85,6 +86,127 @@
       card.addEventListener('click', () => openDetail(s.ticker));
       grid.appendChild(card);
     });
+  }
+
+  // ── Guru 13F Activity ──
+  function renderGuru() {
+    const guru = DATA.guru_activity;
+    const section = document.getElementById('guru-section');
+    if (!guru) { section.classList.add('hidden'); return; }
+    section.classList.remove('hidden');
+
+    // Clusters
+    const clustersEl = document.getElementById('guru-clusters');
+    const multiGuru = (guru.clusters || []).filter(c => c.guru_count >= 2);
+    if (multiGuru.length) {
+      clustersEl.innerHTML = '<h3 style="font-size:.9rem;color:var(--text-dim);margin-bottom:.6rem">Cross-Guru Holdings</h3><div class="cluster-grid"></div>';
+      const grid = clustersEl.querySelector('.cluster-grid');
+      multiGuru.slice(0, 12).forEach(c => {
+        const card = document.createElement('div');
+        card.className = 'cluster-card' + (c.critical ? ' critical' : '');
+        card.innerHTML = `
+          <div class="cluster-header">
+            <span class="cluster-issuer">${c.ticker || c.issuer}</span>
+            <span>
+              ${c.critical ? '<span class="badge badge-critical">CRITICAL</span> ' : ''}
+              <span class="badge badge-guru-count">${c.guru_count} gurus</span>
+            </span>
+          </div>
+          <div class="cluster-gurus">${c.gurus.join(' · ')}</div>
+          <div style="font-size:.75rem;color:var(--text-dim);margin-top:.2rem">Combined: $${fmtVal(c.total_value)}</div>
+        `;
+        grid.appendChild(card);
+      });
+    } else {
+      clustersEl.innerHTML = '';
+    }
+
+    // Portfolio cards
+    const guruGrid = document.getElementById('guru-grid');
+    guruGrid.innerHTML = '';
+    (guru.portfolios || []).forEach(p => {
+      const card = document.createElement('div');
+      card.className = 'guru-card';
+      const rows = (p.top10 || []).map((h, i) => {
+        const cls = (h.on_watchlist ? ' watchlist-hit' : '') + (i >= 5 ? ' guru-hidden' : '');
+        return `<tr class="${cls}">
+          <td>${h.ticker ? '<strong>' + h.ticker + '</strong> ' : ''}${h.issuer}</td>
+          <td>$${fmtVal(h.value)}</td>
+          <td>${h.weight}%</td>
+        </tr>`;
+      }).join('');
+
+      const alertBadges = (p.alerts || []).map(a => {
+        const cls = a.type === 'new' ? 'guru-alert-new' : a.type === 'exit' ? 'guru-alert-exit' : 'guru-alert-doubled';
+        return `<span class="guru-alert-badge ${cls}">${a.label}</span>`;
+      }).join('');
+
+      card.innerHTML = `
+        <div class="guru-header">
+          <span class="guru-name">${p.name}</span>
+          <div class="guru-meta">
+            <span>$${fmtVal(p.total_value)} · ${p.num_positions} pos</span>
+            <span>Filed: ${p.filing_date}</span>
+          </div>
+        </div>
+        ${alertBadges ? '<div class="guru-alerts">' + alertBadges + '</div>' : ''}
+        <div class="guru-holdings">
+          <table>
+            <thead><tr><th>Holding</th><th>Value</th><th>Weight</th></tr></thead>
+            <tbody>${rows}</tbody>
+          </table>
+        </div>
+        ${p.top10 && p.top10.length > 5 ? '<button class="guru-expand" data-expanded="false">Show all ' + p.top10.length + ' ▼</button>' : ''}
+      `;
+
+      const expandBtn = card.querySelector('.guru-expand');
+      if (expandBtn) {
+        expandBtn.addEventListener('click', () => {
+          const expanded = expandBtn.getAttribute('data-expanded') === 'true';
+          card.querySelectorAll('.guru-hidden').forEach(tr => {
+            tr.style.display = expanded ? 'none' : 'table-row';
+          });
+          expandBtn.setAttribute('data-expanded', expanded ? 'false' : 'true');
+          expandBtn.textContent = expanded ? 'Show all ' + p.top10.length + ' ▼' : 'Show less ▲';
+        });
+      }
+
+      guruGrid.appendChild(card);
+    });
+
+    // Watchlist overlap matrix
+    const matrixEl = document.getElementById('guru-watchlist-matrix');
+    const wl = guru.watchlist_overlap || [];
+    if (wl.length) {
+      const guruNames = guru.guru_names || [];
+      const shortName = n => n.split('(')[0].trim().split(' ')[0];
+      let html = '<h3>📋 Watchlist × Guru Overlap</h3><table><thead><tr><th>Ticker</th>';
+      guruNames.forEach(g => { html += `<th>${shortName(g)}</th>`; });
+      html += '</tr></thead><tbody>';
+      wl.forEach(row => {
+        const multi = row.guru_count >= 3;
+        html += `<tr class="${multi ? 'wl-multi' : ''}"><td><strong>${row.ticker}</strong></td>`;
+        guruNames.forEach(g => {
+          if (row.held_by[g]) {
+            html += `<td class="wl-value wl-hit">✅ $${fmtVal(row.held_by[g])}</td>`;
+          } else {
+            html += '<td class="wl-value" style="color:var(--text-dim)">—</td>';
+          }
+        });
+        html += '</tr>';
+      });
+      html += '</tbody></table>';
+      matrixEl.innerHTML = html;
+    } else {
+      matrixEl.innerHTML = '';
+    }
+  }
+
+  function fmtVal(v) {
+    if (v >= 1e9) return (v / 1e9).toFixed(1) + 'B';
+    if (v >= 1e6) return (v / 1e6).toFixed(0) + 'M';
+    if (v >= 1e3) return (v / 1e3).toFixed(0) + 'K';
+    return v.toString();
   }
 
   // ── Signals Table ──
