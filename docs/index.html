@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Weekly Radar — Volume & Momentum Scanner</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header id="header">
+  <div class="header-inner">
+    <h1>📡 Weekly Radar</h1>
+    <div class="header-meta">
+      <span id="scan-date">—</span>
+      <span class="divider">·</span>
+      <span id="next-scan">—</span>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section id="heatmap-section">
+    <h2>📊 Category Heatmap</h2>
+    <table id="heatmap-table">
+      <thead>
+        <tr>
+          <th data-sort="category">Category</th>
+          <th data-sort="ret_1w">1wk %</th>
+          <th data-sort="ret_4w">4wk %</th>
+          <th data-sort="signal_count">Signals</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+  </section>
+
+  <section id="combos-section">
+    <h2>🔥 Combo Signals</h2>
+    <div id="combos-grid"></div>
+  </section>
+
+  <section id="signals-section">
+    <h2>📋 All Signals</h2>
+    <div id="signal-filters"></div>
+    <table id="signals-table">
+      <thead>
+        <tr>
+          <th data-sort="ticker">Ticker</th>
+          <th data-sort="category">Category</th>
+          <th data-sort="signal">Signal</th>
+          <th data-sort="price">Price</th>
+          <th data-sort="vol_ratio">Vol Ratio</th>
+          <th data-sort="ret_4w">4wk %</th>
+          <th data-sort="rs_vs_spy">RS vs SPY</th>
+          <th data-sort="status">Status</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+  </section>
+
+  <section id="detail-panel" class="hidden">
+    <div id="detail-close">&times;</div>
+    <div id="detail-content"></div>
+  </section>
+</main>
+
+<footer>
+  <p>Powered by SEC EDGAR & Yahoo Finance · Updated weekly</p>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>

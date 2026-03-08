@@ -1,0 +1,2151 @@
+{
+  "scan_time": "2026-03-08 22:31 UTC",
+  "next_scan": "2026-03-15",
+  "heatmap": [
+    {
+      "category": "Precious Metals",
+      "ret_1w": -9.52,
+      "ret_4w": 5.54,
+      "signal_count": 4,
+      "tickers": [
+        "GLD",
+        "SLV",
+        "GDX",
+        "GDXJ"
+      ]
+    },
+    {
+      "category": "Energy",
+      "ret_1w": 12.83,
+      "ret_4w": 13.92,
+      "signal_count": 3,
+      "tickers": [
+        "XLE",
+        "USO",
+        "UNG",
+        "XOP"
+      ]
+    },
+    {
+      "category": "Bonds/Rates",
+      "ret_1w": -1.39,
+      "ret_4w": 0.61,
+      "signal_count": 4,
+      "tickers": [
+        "VGLT",
+        "TLT",
+        "TIP",
+        "HYG"
+      ]
+    },
+    {
+      "category": "China/EM",
+      "ret_1w": -5.73,
+      "ret_4w": -7.88,
+      "signal_count": 1,
+      "tickers": [
+        "FXI",
+        "KWEB",
+        "EEM",
+        "VWO"
+      ]
+    },
+    {
+      "category": "Crypto Proxy",
+      "ret_1w": 6.35,
+      "ret_4w": 5.15,
+      "signal_count": 2,
+      "tickers": [
+        "BITO",
+        "MSTR",
+        "COIN"
+      ]
+    },
+    {
+      "category": "Sectors",
+      "ret_1w": -2.92,
+      "ret_4w": -1.01,
+      "signal_count": 3,
+      "tickers": [
+        "XLK",
+        "XLF",
+        "XLV",
+        "XLI",
+        "XLP",
+        "XLU",
+        "XLRE"
+      ]
+    },
+    {
+      "category": "Commodities",
+      "ret_1w": -3.12,
+      "ret_4w": 4.14,
+      "signal_count": 2,
+      "tickers": [
+        "DBC",
+        "COPX",
+        "WEAT",
+        "URA"
+      ]
+    },
+    {
+      "category": "Volatility",
+      "ret_1w": 42.45,
+      "ret_4w": 44.89,
+      "signal_count": 2,
+      "tickers": [
+        "^VIX",
+        "UVXY"
+      ]
+    },
+    {
+      "category": "Portfolio",
+      "ret_1w": -1.58,
+      "ret_4w": -1.99,
+      "signal_count": 6,
+      "tickers": [
+        "AMZN",
+        "COST",
+        "CRM",
+        "GOOG",
+        "LLY",
+        "META",
+        "MRK",
+        "MSFT",
+        "NKE",
+        "NVDA",
+        "TSLA",
+        "UBER",
+        "UNH",
+        "V",
+        "SPY",
+        "VGLT"
+      ]
+    }
+  ],
+  "combos": [
+    {
+      "ticker": "UVXY",
+      "category": "Volatility",
+      "signals": [
+        "volume_spike",
+        "breakout",
+        "relative_strength"
+      ],
+      "is_combo": true,
+      "is_new": false,
+      "price": 54.09,
+      "ma20": 43.57,
+      "above_ma20": "True",
+      "vol_ratio": 2.2,
+      "ret_1w": 36.42,
+      "ret_4w": 45.01,
+      "ret_8w": 57.93,
+      "ret_12w": 27.93,
+      "ret_20w": -10.6,
+      "rs_vs_spy": 47.65
+    },
+    {
+      "ticker": "XLE",
+      "category": "Energy",
+      "signals": [
+        "volume_spike",
+        "relative_strength"
+      ],
+      "is_combo": true,
+      "is_new": false,
+      "price": 56.57,
+      "ma20": 48.0,
+      "above_ma20": "True",
+      "vol_ratio": 2.6,
+      "ret_1w": 1.16,
+      "ret_4w": 6.23,
+      "ret_8w": 21.21,
+      "ret_12w": 25.36,
+      "ret_20w": 32.71,
+      "rs_vs_spy": 8.88
+    },
+    {
+      "ticker": "USO",
+      "category": "Energy",
+      "signals": [
+        "volume_spike",
+        "relative_strength"
+      ],
+      "is_combo": true,
+      "is_new": false,
+      "price": 108.77,
+      "ma20": 74.78,
+      "above_ma20": "True",
+      "vol_ratio": 9.0,
+      "ret_1w": 32.73,
+      "ret_4w": 41.28,
+      "ret_8w": 53.67,
+      "ret_12w": 58.07,
+      "ret_20w": 60.0,
+      "rs_vs_spy": 43.92
+    },
+    {
+      "ticker": "XOP",
+      "category": "Energy",
+      "signals": [
+        "volume_spike",
+        "relative_strength"
+      ],
+      "is_combo": true,
+      "is_new": false,
+      "price": 164.13,
+      "ma20": 135.91,
+      "above_ma20": "True",
+      "vol_ratio": 3.0,
+      "ret_1w": 6.77,
+      "ret_4w": 12.1,
+      "ret_8w": 28.82,
+      "ret_12w": 25.51,
+      "ret_20w": 33.79,
+      "rs_vs_spy": 14.74
+    },
+    {
+      "ticker": "HYG",
+      "category": "Bonds/Rates",
+      "signals": [
+        "volume_spike",
+        "breakdown"
+      ],
+      "is_combo": true,
+      "is_new": false,
+      "price": 79.69,
+      "ma20": 79.97,
+      "above_ma20": "False",
+      "vol_ratio": 3.0,
+      "ret_1w": -0.79,
+      "ret_4w": -0.9,
+      "ret_8w": -1.13,
+      "ret_12w": -0.14,
+      "ret_20w": 0.65,
+      "rs_vs_spy": 1.74
+    },
+    {
+      "ticker": "BITO",
+      "category": "Crypto Proxy",
+      "signals": [
+        "volume_spike",
+        "breakdown"
+      ],
+      "is_combo": true,
+      "is_new": false,
+      "price": 9.39,
+      "ma20": 11.96,
+      "above_ma20": "False",
+      "vol_ratio": 2.2,
+      "ret_1w": 3.8,
+      "ret_4w": -2.95,
+      "ret_8w": -24.88,
+      "ret_12w": -25.14,
+      "ret_20w": -36.9,
+      "rs_vs_spy": -0.3
+    },
+    {
+      "ticker": "COIN",
+      "category": "Crypto Proxy",
+      "signals": [
+        "momentum_shift",
+        "relative_strength"
+      ],
+      "is_combo": true,
+      "is_new": false,
+      "price": 197.2,
+      "ma20": 241.39,
+      "above_ma20": "False",
+      "vol_ratio": 1.7,
+      "ret_1w": 12.14,
+      "ret_4w": 19.43,
+      "ret_8w": -18.1,
+      "ret_12w": -26.27,
+      "ret_20w": -41.31,
+      "rs_vs_spy": 22.07
+    },
+    {
+      "ticker": "DBC",
+      "category": "Commodities",
+      "signals": [
+        "volume_spike",
+        "relative_strength"
+      ],
+      "is_combo": true,
+      "is_new": false,
+      "price": 27.51,
+      "ma20": 23.18,
+      "above_ma20": "True",
+      "vol_ratio": 3.9,
+      "ret_1w": 9.6,
+      "ret_4w": 14.58,
+      "ret_8w": 20.13,
+      "ret_12w": 24.07,
+      "ret_20w": 28.55,
+      "rs_vs_spy": 17.22
+    },
+    {
+      "ticker": "WEAT",
+      "category": "Commodities",
+      "signals": [
+        "volume_spike",
+        "relative_strength"
+      ],
+      "is_combo": true,
+      "is_new": false,
+      "price": 23.61,
+      "ma20": 20.98,
+      "above_ma20": "True",
+      "vol_ratio": 7.2,
+      "ret_1w": 4.61,
+      "ret_4w": 14.06,
+      "ret_8w": 16.08,
+      "ret_12w": 15.0,
+      "ret_20w": 16.59,
+      "rs_vs_spy": 16.7
+    },
+    {
+      "ticker": "CRM",
+      "category": "Portfolio",
+      "signals": [
+        "momentum_shift",
+        "relative_strength"
+      ],
+      "is_combo": true,
+      "is_new": false,
+      "price": 202.11,
+      "ma20": 232.29,
+      "above_ma20": "False",
+      "vol_ratio": 1.3,
+      "ret_1w": 3.76,
+      "ret_4w": 5.62,
+      "ret_8w": -22.25,
+      "ret_12w": -22.8,
+      "ret_20w": -16.72,
+      "rs_vs_spy": 8.26
+    }
+  ],
+  "signals": [
+    {
+      "ticker": "BITO",
+      "category": "Crypto Proxy",
+      "signals": [
+        "volume_spike",
+        "breakdown"
+      ],
+      "is_combo": true,
+      "is_new": false,
+      "price": 9.39,
+      "ma20": 11.96,
+      "above_ma20": "False",
+      "vol_ratio": 2.2,
+      "ret_1w": 3.8,
+      "ret_4w": -2.95,
+      "ret_8w": -24.88,
+      "ret_12w": -25.14,
+      "ret_20w": -36.9,
+      "rs_vs_spy": -0.3
+    },
+    {
+      "ticker": "COIN",
+      "category": "Crypto Proxy",
+      "signals": [
+        "momentum_shift",
+        "relative_strength"
+      ],
+      "is_combo": true,
+      "is_new": false,
+      "price": 197.2,
+      "ma20": 241.39,
+      "above_ma20": "False",
+      "vol_ratio": 1.7,
+      "ret_1w": 12.14,
+      "ret_4w": 19.43,
+      "ret_8w": -18.1,
+      "ret_12w": -26.27,
+      "ret_20w": -41.31,
+      "rs_vs_spy": 22.07
+    },
+    {
+      "ticker": "CRM",
+      "category": "Portfolio",
+      "signals": [
+        "momentum_shift",
+        "relative_strength"
+      ],
+      "is_combo": true,
+      "is_new": false,
+      "price": 202.11,
+      "ma20": 232.29,
+      "above_ma20": "False",
+      "vol_ratio": 1.3,
+      "ret_1w": 3.76,
+      "ret_4w": 5.62,
+      "ret_8w": -22.25,
+      "ret_12w": -22.8,
+      "ret_20w": -16.72,
+      "rs_vs_spy": 8.26
+    },
+    {
+      "ticker": "DBC",
+      "category": "Commodities",
+      "signals": [
+        "volume_spike",
+        "relative_strength"
+      ],
+      "is_combo": true,
+      "is_new": false,
+      "price": 27.51,
+      "ma20": 23.18,
+      "above_ma20": "True",
+      "vol_ratio": 3.9,
+      "ret_1w": 9.6,
+      "ret_4w": 14.58,
+      "ret_8w": 20.13,
+      "ret_12w": 24.07,
+      "ret_20w": 28.55,
+      "rs_vs_spy": 17.22
+    },
+    {
+      "ticker": "HYG",
+      "category": "Bonds/Rates",
+      "signals": [
+        "volume_spike",
+        "breakdown"
+      ],
+      "is_combo": true,
+      "is_new": false,
+      "price": 79.69,
+      "ma20": 79.97,
+      "above_ma20": "False",
+      "vol_ratio": 3.0,
+      "ret_1w": -0.79,
+      "ret_4w": -0.9,
+      "ret_8w": -1.13,
+      "ret_12w": -0.14,
+      "ret_20w": 0.65,
+      "rs_vs_spy": 1.74
+    },
+    {
+      "ticker": "USO",
+      "category": "Energy",
+      "signals": [
+        "volume_spike",
+        "relative_strength"
+      ],
+      "is_combo": true,
+      "is_new": false,
+      "price": 108.77,
+      "ma20": 74.78,
+      "above_ma20": "True",
+      "vol_ratio": 9.0,
+      "ret_1w": 32.73,
+      "ret_4w": 41.28,
+      "ret_8w": 53.67,
+      "ret_12w": 58.07,
+      "ret_20w": 60.0,
+      "rs_vs_spy": 43.92
+    },
+    {
+      "ticker": "UVXY",
+      "category": "Volatility",
+      "signals": [
+        "volume_spike",
+        "breakout",
+        "relative_strength"
+      ],
+      "is_combo": true,
+      "is_new": false,
+      "price": 54.09,
+      "ma20": 43.57,
+      "above_ma20": "True",
+      "vol_ratio": 2.2,
+      "ret_1w": 36.42,
+      "ret_4w": 45.01,
+      "ret_8w": 57.93,
+      "ret_12w": 27.93,
+      "ret_20w": -10.6,
+      "rs_vs_spy": 47.65
+    },
+    {
+      "ticker": "WEAT",
+      "category": "Commodities",
+      "signals": [
+        "volume_spike",
+        "relative_strength"
+      ],
+      "is_combo": true,
+      "is_new": false,
+      "price": 23.61,
+      "ma20": 20.98,
+      "above_ma20": "True",
+      "vol_ratio": 7.2,
+      "ret_1w": 4.61,
+      "ret_4w": 14.06,
+      "ret_8w": 16.08,
+      "ret_12w": 15.0,
+      "ret_20w": 16.59,
+      "rs_vs_spy": 16.7
+    },
+    {
+      "ticker": "XLE",
+      "category": "Energy",
+      "signals": [
+        "volume_spike",
+        "relative_strength"
+      ],
+      "is_combo": true,
+      "is_new": false,
+      "price": 56.57,
+      "ma20": 48.0,
+      "above_ma20": "True",
+      "vol_ratio": 2.6,
+      "ret_1w": 1.16,
+      "ret_4w": 6.23,
+      "ret_8w": 21.21,
+      "ret_12w": 25.36,
+      "ret_20w": 32.71,
+      "rs_vs_spy": 8.88
+    },
+    {
+      "ticker": "XOP",
+      "category": "Energy",
+      "signals": [
+        "volume_spike",
+        "relative_strength"
+      ],
+      "is_combo": true,
+      "is_new": false,
+      "price": 164.13,
+      "ma20": 135.91,
+      "above_ma20": "True",
+      "vol_ratio": 3.0,
+      "ret_1w": 6.77,
+      "ret_4w": 12.1,
+      "ret_8w": 28.82,
+      "ret_12w": 25.51,
+      "ret_20w": 33.79,
+      "rs_vs_spy": 14.74
+    },
+    {
+      "ticker": "AMZN",
+      "category": "Portfolio",
+      "signals": [
+        "relative_strength"
+      ],
+      "is_combo": false,
+      "is_new": false,
+      "price": 213.12,
+      "ma20": 227.54,
+      "above_ma20": "False",
+      "vol_ratio": 1.4,
+      "ret_1w": 1.49,
+      "ret_4w": 1.33,
+      "ret_8w": -13.85,
+      "ret_12w": -5.78,
+      "ret_20w": 0.04,
+      "rs_vs_spy": 3.97
+    },
+    {
+      "ticker": "EEM",
+      "category": "China/EM",
+      "signals": [
+        "volume_spike"
+      ],
+      "is_combo": false,
+      "is_new": false,
+      "price": 57.32,
+      "ma20": 56.54,
+      "above_ma20": "True",
+      "vol_ratio": 2.3,
+      "ret_1w": -8.41,
+      "ret_4w": -4.58,
+      "ret_8w": 0.32,
+      "ret_12w": 7.19,
+      "ret_20w": 7.31,
+      "rs_vs_spy": -1.94
+    },
+    {
+      "ticker": "GDX",
+      "category": "Precious Metals",
+      "signals": [
+        "relative_strength"
+      ],
+      "is_combo": false,
+      "is_new": false,
+      "price": 101.38,
+      "ma20": 89.6,
+      "above_ma20": "True",
+      "vol_ratio": 1.6,
+      "ret_1w": -12.48,
+      "ret_4w": 4.1,
+      "ret_8w": 9.53,
+      "ret_12w": 19.21,
+      "ret_20w": 29.7,
+      "rs_vs_spy": 6.74
+    },
+    {
+      "ticker": "GDXJ",
+      "category": "Precious Metals",
+      "signals": [
+        "relative_strength"
+      ],
+      "is_combo": false,
+      "is_new": false,
+      "price": 136.17,
+      "ma20": 117.53,
+      "above_ma20": "True",
+      "vol_ratio": 1.3,
+      "ret_1w": -12.82,
+      "ret_4w": 5.92,
+      "ret_8w": 11.66,
+      "ret_12w": 21.88,
+      "ret_20w": 35.11,
+      "rs_vs_spy": 8.56
+    },
+    {
+      "ticker": "GLD",
+      "category": "Precious Metals",
+      "signals": [
+        "relative_strength"
+      ],
+      "is_combo": false,
+      "is_new": false,
+      "price": 473.51,
+      "ma20": 416.53,
+      "above_ma20": "True",
+      "vol_ratio": 0.9,
+      "ret_1w": -2.12,
+      "ret_4w": 3.96,
+      "ret_8w": 14.24,
+      "ret_12w": 19.74,
+      "ret_20w": 21.73,
+      "rs_vs_spy": 6.6
+    },
+    {
+      "ticker": "MSFT",
+      "category": "Portfolio",
+      "signals": [
+        "relative_strength"
+      ],
+      "is_combo": false,
+      "is_new": false,
+      "price": 408.96,
+      "ma20": 461.68,
+      "above_ma20": "False",
+      "vol_ratio": 1.3,
+      "ret_1w": 4.13,
+      "ret_4w": 2.18,
+      "ret_8w": -14.48,
+      "ret_12w": -14.34,
+      "ret_20w": -20.04,
+      "rs_vs_spy": 4.82
+    },
+    {
+      "ticker": "SLV",
+      "category": "Precious Metals",
+      "signals": [
+        "relative_strength"
+      ],
+      "is_combo": false,
+      "is_new": false,
+      "price": 75.94,
+      "ma20": 64.02,
+      "above_ma20": "True",
+      "vol_ratio": 0.6,
+      "ret_1w": -10.65,
+      "ret_4w": 8.19,
+      "ret_8w": 4.92,
+      "ret_12w": 35.37,
+      "ret_20w": 61.61,
+      "rs_vs_spy": 10.83
+    },
+    {
+      "ticker": "TIP",
+      "category": "Bonds/Rates",
+      "signals": [
+        "relative_strength"
+      ],
+      "is_combo": false,
+      "is_new": false,
+      "price": 111.43,
+      "ma20": 110.44,
+      "above_ma20": "True",
+      "vol_ratio": 1.4,
+      "ret_1w": -0.4,
+      "ret_4w": 0.69,
+      "ret_8w": 1.13,
+      "ret_12w": 1.4,
+      "ret_20w": 0.7,
+      "rs_vs_spy": 3.33
+    },
+    {
+      "ticker": "TLT",
+      "category": "Bonds/Rates",
+      "signals": [
+        "relative_strength"
+      ],
+      "is_combo": false,
+      "is_new": false,
+      "price": 88.46,
+      "ma20": 88.13,
+      "above_ma20": "True",
+      "vol_ratio": 1.8,
+      "ret_1w": -2.27,
+      "ret_4w": 1.39,
+      "ret_8w": 0.94,
+      "ret_12w": 2.01,
+      "ret_20w": -1.6,
+      "rs_vs_spy": 4.03
+    },
+    {
+      "ticker": "UBER",
+      "category": "Portfolio",
+      "signals": [
+        "relative_strength"
+      ],
+      "is_combo": false,
+      "is_new": false,
+      "price": 75.13,
+      "ma20": 83.36,
+      "above_ma20": "False",
+      "vol_ratio": 1.2,
+      "ret_1w": -0.38,
+      "ret_4w": 0.48,
+      "ret_8w": -12.07,
+      "ret_12w": -11.73,
+      "ret_20w": -18.6,
+      "rs_vs_spy": 3.12
+    },
+    {
+      "ticker": "UNH",
+      "category": "Portfolio",
+      "signals": [
+        "relative_strength"
+      ],
+      "is_combo": false,
+      "is_new": false,
+      "price": 286.48,
+      "ma20": 320.41,
+      "above_ma20": "False",
+      "vol_ratio": 1.0,
+      "ret_1w": -2.32,
+      "ret_4w": 3.55,
+      "ret_8w": -16.72,
+      "ret_12w": -15.63,
+      "ret_20w": -19.12,
+      "rs_vs_spy": 6.19
+    },
+    {
+      "ticker": "VGLT",
+      "category": "Portfolio",
+      "signals": [
+        "relative_strength"
+      ],
+      "is_combo": false,
+      "is_new": false,
+      "price": 56.45,
+      "ma20": 56.2,
+      "above_ma20": "True",
+      "vol_ratio": 1.6,
+      "ret_1w": -2.09,
+      "ret_4w": 1.28,
+      "ret_8w": 0.82,
+      "ret_12w": 1.96,
+      "ret_20w": -1.03,
+      "rs_vs_spy": 3.92
+    },
+    {
+      "ticker": "XLI",
+      "category": "Sectors",
+      "signals": [
+        "volume_spike"
+      ],
+      "is_combo": false,
+      "is_new": false,
+      "price": 169.94,
+      "ma20": 161.29,
+      "above_ma20": "True",
+      "vol_ratio": 2.4,
+      "ret_1w": -4.06,
+      "ret_4w": -1.87,
+      "ret_8w": 4.95,
+      "ret_12w": 8.79,
+      "ret_20w": 12.39,
+      "rs_vs_spy": 0.77
+    },
+    {
+      "ticker": "XLRE",
+      "category": "Sectors",
+      "signals": [
+        "relative_strength"
+      ],
+      "is_combo": false,
+      "is_new": false,
+      "price": 42.89,
+      "ma20": 41.4,
+      "above_ma20": "True",
+      "vol_ratio": 1.5,
+      "ret_1w": -2.17,
+      "ret_4w": 2.14,
+      "ret_8w": 5.9,
+      "ret_12w": 6.4,
+      "ret_20w": 3.14,
+      "rs_vs_spy": 4.78
+    },
+    {
+      "ticker": "XLU",
+      "category": "Sectors",
+      "signals": [
+        "relative_strength"
+      ],
+      "is_combo": false,
+      "is_new": false,
+      "price": 46.74,
+      "ma20": 44.13,
+      "above_ma20": "True",
+      "vol_ratio": 1.7,
+      "ret_1w": -2.07,
+      "ret_4w": 7.82,
+      "ret_8w": 9.95,
+      "ret_12w": 9.95,
+      "ret_20w": 2.85,
+      "rs_vs_spy": 10.46
+    },
+    {
+      "ticker": "^VIX",
+      "category": "Volatility",
+      "signals": [
+        "relative_strength"
+      ],
+      "is_combo": false,
+      "is_new": false,
+      "price": 29.49,
+      "ma20": 18.0,
+      "above_ma20": "True",
+      "vol_ratio": 0,
+      "ret_1w": 48.49,
+      "ret_4w": 44.77,
+      "ret_8w": 103.52,
+      "ret_12w": 87.36,
+      "ret_20w": 41.92,
+      "rs_vs_spy": 47.41
+    }
+  ],
+  "ticker_details": {
+    "GLD": {
+      "category": "Precious Metals",
+      "price": 473.51,
+      "ma20": 416.53,
+      "above_ma20": "True",
+      "vol_ratio": 0.9,
+      "ret_1w": -2.12,
+      "ret_4w": 3.96,
+      "ret_8w": 14.24,
+      "ret_12w": 19.74,
+      "ret_20w": 21.73,
+      "rs_vs_spy": 6.6,
+      "signals": [
+        "relative_strength"
+      ],
+      "vol_history": [
+        20,
+        22,
+        35,
+        38,
+        100,
+        48,
+        24,
+        17,
+        28,
+        32
+      ]
+    },
+    "SLV": {
+      "category": "Precious Metals",
+      "price": 75.94,
+      "ma20": 64.02,
+      "above_ma20": "True",
+      "vol_ratio": 0.6,
+      "ret_1w": -10.65,
+      "ret_4w": 8.19,
+      "ret_8w": 4.92,
+      "ret_12w": 35.37,
+      "ret_20w": 61.61,
+      "rs_vs_spy": 10.83,
+      "signals": [
+        "relative_strength"
+      ],
+      "vol_history": [
+        30,
+        30,
+        46,
+        31,
+        100,
+        50,
+        28,
+        18,
+        22,
+        23
+      ]
+    },
+    "GDX": {
+      "category": "Precious Metals",
+      "price": 101.38,
+      "ma20": 89.6,
+      "above_ma20": "True",
+      "vol_ratio": 1.6,
+      "ret_1w": -12.48,
+      "ret_4w": 4.1,
+      "ret_8w": 9.53,
+      "ret_12w": 19.21,
+      "ret_20w": 29.7,
+      "rs_vs_spy": 6.74,
+      "signals": [
+        "relative_strength"
+      ],
+      "vol_history": [
+        36,
+        38,
+        38,
+        44,
+        100,
+        64,
+        52,
+        32,
+        35,
+        74
+      ]
+    },
+    "GDXJ": {
+      "category": "Precious Metals",
+      "price": 136.17,
+      "ma20": 117.53,
+      "above_ma20": "True",
+      "vol_ratio": 1.3,
+      "ret_1w": -12.82,
+      "ret_4w": 5.92,
+      "ret_8w": 11.66,
+      "ret_12w": 21.88,
+      "ret_20w": 35.11,
+      "rs_vs_spy": 8.56,
+      "signals": [
+        "relative_strength"
+      ],
+      "vol_history": [
+        40,
+        45,
+        41,
+        59,
+        100,
+        61,
+        55,
+        35,
+        40,
+        64
+      ]
+    },
+    "XLE": {
+      "category": "Energy",
+      "price": 56.57,
+      "ma20": 48.0,
+      "above_ma20": "True",
+      "vol_ratio": 2.6,
+      "ret_1w": 1.16,
+      "ret_4w": 6.23,
+      "ret_8w": 21.21,
+      "ret_12w": 25.36,
+      "ret_20w": 32.71,
+      "rs_vs_spy": 8.88,
+      "signals": [
+        "volume_spike",
+        "relative_strength"
+      ],
+      "vol_history": [
+        17,
+        51,
+        41,
+        36,
+        47,
+        55,
+        42,
+        38,
+        39,
+        100
+      ]
+    },
+    "USO": {
+      "category": "Energy",
+      "price": 108.77,
+      "ma20": 74.78,
+      "above_ma20": "True",
+      "vol_ratio": 9.0,
+      "ret_1w": 32.73,
+      "ret_4w": 41.28,
+      "ret_8w": 53.67,
+      "ret_12w": 58.07,
+      "ret_20w": 60.0,
+      "rs_vs_spy": 43.92,
+      "signals": [
+        "volume_spike",
+        "relative_strength"
+      ],
+      "vol_history": [
+        4,
+        9,
+        14,
+        7,
+        14,
+        16,
+        11,
+        13,
+        18,
+        100
+      ]
+    },
+    "UNG": {
+      "category": "Energy",
+      "price": 12.75,
+      "ma20": 13.19,
+      "above_ma20": "False",
+      "vol_ratio": 1.1,
+      "ret_1w": 10.68,
+      "ret_4w": -3.92,
+      "ret_8w": 22.6,
+      "ret_12w": 0.16,
+      "ret_20w": 7.41,
+      "rs_vs_spy": -1.28,
+      "signals": [],
+      "vol_history": [
+        47,
+        75,
+        66,
+        100,
+        95,
+        55,
+        29,
+        22,
+        23,
+        63
+      ]
+    },
+    "XOP": {
+      "category": "Energy",
+      "price": 164.13,
+      "ma20": 135.91,
+      "above_ma20": "True",
+      "vol_ratio": 3.0,
+      "ret_1w": 6.77,
+      "ret_4w": 12.1,
+      "ret_8w": 28.82,
+      "ret_12w": 25.51,
+      "ret_20w": 33.79,
+      "rs_vs_spy": 14.74,
+      "signals": [
+        "volume_spike",
+        "relative_strength"
+      ],
+      "vol_history": [
+        13,
+        35,
+        44,
+        32,
+        49,
+        55,
+        37,
+        29,
+        29,
+        100
+      ]
+    },
+    "VGLT": {
+      "category": "Portfolio",
+      "price": 56.45,
+      "ma20": 56.2,
+      "above_ma20": "True",
+      "vol_ratio": 1.6,
+      "ret_1w": -2.09,
+      "ret_4w": 1.28,
+      "ret_8w": 0.82,
+      "ret_12w": 1.96,
+      "ret_20w": -1.03,
+      "rs_vs_spy": 3.92,
+      "signals": [
+        "relative_strength"
+      ],
+      "vol_history": [
+        40,
+        89,
+        76,
+        64,
+        60,
+        67,
+        53,
+        76,
+        70,
+        100
+      ]
+    },
+    "TLT": {
+      "category": "Bonds/Rates",
+      "price": 88.46,
+      "ma20": 88.13,
+      "above_ma20": "True",
+      "vol_ratio": 1.8,
+      "ret_1w": -2.27,
+      "ret_4w": 1.39,
+      "ret_8w": 0.94,
+      "ret_12w": 2.01,
+      "ret_20w": -1.6,
+      "rs_vs_spy": 4.03,
+      "signals": [
+        "relative_strength"
+      ],
+      "vol_history": [
+        42,
+        62,
+        60,
+        62,
+        64,
+        59,
+        65,
+        46,
+        51,
+        100
+      ]
+    },
+    "TIP": {
+      "category": "Bonds/Rates",
+      "price": 111.43,
+      "ma20": 110.44,
+      "above_ma20": "True",
+      "vol_ratio": 1.4,
+      "ret_1w": -0.4,
+      "ret_4w": 0.69,
+      "ret_8w": 1.13,
+      "ret_12w": 1.4,
+      "ret_20w": 0.7,
+      "rs_vs_spy": 3.33,
+      "signals": [
+        "relative_strength"
+      ],
+      "vol_history": [
+        56,
+        90,
+        69,
+        100,
+        72,
+        93,
+        85,
+        60,
+        57,
+        98
+      ]
+    },
+    "HYG": {
+      "category": "Bonds/Rates",
+      "price": 79.69,
+      "ma20": 79.97,
+      "above_ma20": "False",
+      "vol_ratio": 3.0,
+      "ret_1w": -0.79,
+      "ret_4w": -0.9,
+      "ret_8w": -1.13,
+      "ret_12w": -0.14,
+      "ret_20w": 0.65,
+      "rs_vs_spy": 1.74,
+      "signals": [
+        "volume_spike",
+        "breakdown"
+      ],
+      "vol_history": [
+        18,
+        33,
+        36,
+        31,
+        37,
+        51,
+        37,
+        28,
+        47,
+        100
+      ]
+    },
+    "FXI": {
+      "category": "China/EM",
+      "price": 35.82,
+      "ma20": 38.91,
+      "above_ma20": "False",
+      "vol_ratio": 1.8,
+      "ret_1w": -3.92,
+      "ret_4w": -8.67,
+      "ret_8w": -8.97,
+      "ret_12w": -7.35,
+      "ret_20w": -9.48,
+      "rs_vs_spy": -6.03,
+      "signals": [],
+      "vol_history": [
+        48,
+        55,
+        79,
+        49,
+        69,
+        73,
+        64,
+        44,
+        63,
+        100
+      ]
+    },
+    "KWEB": {
+      "category": "China/EM",
+      "price": 29.71,
+      "ma20": 34.75,
+      "above_ma20": "False",
+      "vol_ratio": 1.5,
+      "ret_1w": -4.35,
+      "ret_4w": -13.41,
+      "ret_8w": -17.08,
+      "ret_12w": -14.56,
+      "ret_20w": -20.18,
+      "rs_vs_spy": -10.77,
+      "signals": [],
+      "vol_history": [
+        37,
+        65,
+        100,
+        63,
+        75,
+        86,
+        69,
+        43,
+        64,
+        96
+      ]
+    },
+    "EEM": {
+      "category": "China/EM",
+      "price": 57.32,
+      "ma20": 56.54,
+      "above_ma20": "True",
+      "vol_ratio": 2.3,
+      "ret_1w": -8.41,
+      "ret_4w": -4.58,
+      "ret_8w": 0.32,
+      "ret_12w": 7.19,
+      "ret_20w": 7.31,
+      "rs_vs_spy": -1.94,
+      "signals": [
+        "volume_spike"
+      ],
+      "vol_history": [
+        25,
+        37,
+        53,
+        36,
+        72,
+        55,
+        47,
+        39,
+        51,
+        100
+      ]
+    },
+    "VWO": {
+      "category": "China/EM",
+      "price": 54.47,
+      "ma20": 54.93,
+      "above_ma20": "False",
+      "vol_ratio": 1.8,
+      "ret_1w": -6.25,
+      "ret_4w": -4.87,
+      "ret_8w": -1.73,
+      "ret_12w": 2.97,
+      "ret_20w": 2.13,
+      "rs_vs_spy": -2.23,
+      "signals": [],
+      "vol_history": [
+        39,
+        64,
+        81,
+        58,
+        74,
+        80,
+        49,
+        32,
+        46,
+        100
+      ]
+    },
+    "BITO": {
+      "category": "Crypto Proxy",
+      "price": 9.39,
+      "ma20": 11.96,
+      "above_ma20": "False",
+      "vol_ratio": 2.2,
+      "ret_1w": 3.8,
+      "ret_4w": -2.95,
+      "ret_8w": -24.88,
+      "ret_12w": -25.14,
+      "ret_20w": -36.9,
+      "rs_vs_spy": -0.3,
+      "signals": [
+        "volume_spike",
+        "breakdown"
+      ],
+      "vol_history": [
+        29,
+        43,
+        45,
+        39,
+        48,
+        64,
+        54,
+        42,
+        66,
+        100
+      ]
+    },
+    "MSTR": {
+      "category": "Crypto Proxy",
+      "price": 133.53,
+      "ma20": 174.55,
+      "above_ma20": "False",
+      "vol_ratio": 1.4,
+      "ret_1w": 3.11,
+      "ret_4w": -1.04,
+      "ret_8w": -15.13,
+      "ret_12w": -24.32,
+      "ret_20w": -53.93,
+      "rs_vs_spy": 1.6,
+      "signals": [],
+      "vol_history": [
+        32,
+        64,
+        63,
+        36,
+        51,
+        100,
+        65,
+        35,
+        46,
+        72
+      ]
+    },
+    "COIN": {
+      "category": "Crypto Proxy",
+      "price": 197.2,
+      "ma20": 241.39,
+      "above_ma20": "False",
+      "vol_ratio": 1.7,
+      "ret_1w": 12.14,
+      "ret_4w": 19.43,
+      "ret_8w": -18.1,
+      "ret_12w": -26.27,
+      "ret_20w": -41.31,
+      "rs_vs_spy": 22.07,
+      "signals": [
+        "momentum_shift",
+        "relative_strength"
+      ],
+      "vol_history": [
+        30,
+        49,
+        50,
+        42,
+        53,
+        100,
+        94,
+        57,
+        78,
+        99
+      ]
+    },
+    "XLK": {
+      "category": "Sectors",
+      "price": 137.29,
+      "ma20": 143.34,
+      "above_ma20": "False",
+      "vol_ratio": 1.5,
+      "ret_1w": -1.06,
+      "ret_4w": -2.72,
+      "ret_8w": -6.06,
+      "ret_12w": -4.31,
+      "ret_20w": -3.51,
+      "rs_vs_spy": -0.08,
+      "signals": [],
+      "vol_history": [
+        24,
+        46,
+        48,
+        44,
+        50,
+        100,
+        72,
+        39,
+        48,
+        74
+      ]
+    },
+    "XLF": {
+      "category": "Sectors",
+      "price": 50.57,
+      "ma20": 53.25,
+      "above_ma20": "False",
+      "vol_ratio": 1.9,
+      "ret_1w": -1.67,
+      "ret_4w": -6.8,
+      "ret_8w": -9.26,
+      "ret_12w": -7.65,
+      "ret_20w": -2.75,
+      "rs_vs_spy": -4.16,
+      "signals": [],
+      "vol_history": [
+        26,
+        49,
+        64,
+        47,
+        50,
+        69,
+        71,
+        47,
+        83,
+        100
+      ]
+    },
+    "XLV": {
+      "category": "Sectors",
+      "price": 152.7,
+      "ma20": 153.91,
+      "above_ma20": "False",
+      "vol_ratio": 1.9,
+      "ret_1w": -4.68,
+      "ret_4w": -3.18,
+      "ret_8w": -2.93,
+      "ret_12w": -0.46,
+      "ret_20w": 7.04,
+      "rs_vs_spy": -0.54,
+      "signals": [],
+      "vol_history": [
+        24,
+        73,
+        59,
+        46,
+        50,
+        82,
+        65,
+        47,
+        64,
+        100
+      ]
+    },
+    "XLI": {
+      "category": "Sectors",
+      "price": 169.94,
+      "ma20": 161.29,
+      "above_ma20": "True",
+      "vol_ratio": 2.4,
+      "ret_1w": -4.06,
+      "ret_4w": -1.87,
+      "ret_8w": 4.95,
+      "ret_12w": 8.79,
+      "ret_20w": 12.39,
+      "rs_vs_spy": 0.77,
+      "signals": [
+        "volume_spike"
+      ],
+      "vol_history": [
+        18,
+        51,
+        41,
+        41,
+        45,
+        65,
+        51,
+        42,
+        45,
+        100
+      ]
+    },
+    "XLP": {
+      "category": "Sectors",
+      "price": 85.78,
+      "ma20": 81.09,
+      "above_ma20": "True",
+      "vol_ratio": 1.8,
+      "ret_1w": -4.7,
+      "ret_4w": -2.46,
+      "ret_8w": 8.24,
+      "ret_12w": 8.87,
+      "ret_20w": 8.45,
+      "rs_vs_spy": 0.18,
+      "signals": [],
+      "vol_history": [
+        21,
+        60,
+        80,
+        46,
+        46,
+        93,
+        75,
+        50,
+        53,
+        100
+      ]
+    },
+    "XLU": {
+      "category": "Sectors",
+      "price": 46.74,
+      "ma20": 44.13,
+      "above_ma20": "True",
+      "vol_ratio": 1.7,
+      "ret_1w": -2.07,
+      "ret_4w": 7.82,
+      "ret_8w": 9.95,
+      "ret_12w": 9.95,
+      "ret_20w": 2.85,
+      "rs_vs_spy": 10.46,
+      "signals": [
+        "relative_strength"
+      ],
+      "vol_history": [
+        27,
+        62,
+        56,
+        57,
+        66,
+        82,
+        86,
+        57,
+        79,
+        100
+      ]
+    },
+    "XLRE": {
+      "category": "Sectors",
+      "price": 42.89,
+      "ma20": 41.4,
+      "above_ma20": "True",
+      "vol_ratio": 1.5,
+      "ret_1w": -2.17,
+      "ret_4w": 2.14,
+      "ret_8w": 5.9,
+      "ret_12w": 6.4,
+      "ret_20w": 3.14,
+      "rs_vs_spy": 4.78,
+      "signals": [
+        "relative_strength"
+      ],
+      "vol_history": [
+        50,
+        75,
+        91,
+        55,
+        62,
+        69,
+        89,
+        53,
+        72,
+        100
+      ]
+    },
+    "DBC": {
+      "category": "Commodities",
+      "price": 27.51,
+      "ma20": 23.18,
+      "above_ma20": "True",
+      "vol_ratio": 3.9,
+      "ret_1w": 9.6,
+      "ret_4w": 14.58,
+      "ret_8w": 20.13,
+      "ret_12w": 24.07,
+      "ret_20w": 28.55,
+      "rs_vs_spy": 17.22,
+      "signals": [
+        "volume_spike",
+        "relative_strength"
+      ],
+      "vol_history": [
+        21,
+        23,
+        25,
+        18,
+        40,
+        54,
+        29,
+        10,
+        23,
+        100
+      ]
+    },
+    "COPX": {
+      "category": "Commodities",
+      "price": 79.95,
+      "ma20": 73.62,
+      "above_ma20": "True",
+      "vol_ratio": 1.5,
+      "ret_1w": -16.46,
+      "ret_4w": -5.59,
+      "ret_8w": 3.11,
+      "ret_12w": 20.08,
+      "ret_20w": 33.9,
+      "rs_vs_spy": -2.94,
+      "signals": [],
+      "vol_history": [
+        18,
+        33,
+        35,
+        31,
+        100,
+        58,
+        30,
+        25,
+        41,
+        56
+      ]
+    },
+    "WEAT": {
+      "category": "Commodities",
+      "price": 23.61,
+      "ma20": 20.98,
+      "above_ma20": "True",
+      "vol_ratio": 7.2,
+      "ret_1w": 4.61,
+      "ret_4w": 14.06,
+      "ret_8w": 16.08,
+      "ret_12w": 15.0,
+      "ret_20w": 16.59,
+      "rs_vs_spy": 16.7,
+      "signals": [
+        "volume_spike",
+        "relative_strength"
+      ],
+      "vol_history": [
+        6,
+        8,
+        9,
+        9,
+        21,
+        17,
+        20,
+        20,
+        22,
+        100
+      ]
+    },
+    "URA": {
+      "category": "Commodities",
+      "price": 48.78,
+      "ma20": 48.63,
+      "above_ma20": "True",
+      "vol_ratio": 1.1,
+      "ret_1w": -10.23,
+      "ret_4w": -6.48,
+      "ret_8w": -3.04,
+      "ret_12w": 10.99,
+      "ret_20w": -4.13,
+      "rs_vs_spy": -3.84,
+      "signals": [],
+      "vol_history": [
+        31,
+        59,
+        52,
+        53,
+        100,
+        65,
+        42,
+        29,
+        43,
+        55
+      ]
+    },
+    "^VIX": {
+      "category": "Volatility",
+      "price": 29.49,
+      "ma20": 18.0,
+      "above_ma20": "True",
+      "vol_ratio": 0,
+      "ret_1w": 48.49,
+      "ret_4w": 44.77,
+      "ret_8w": 103.52,
+      "ret_12w": 87.36,
+      "ret_20w": 41.92,
+      "rs_vs_spy": 47.41,
+      "signals": [
+        "relative_strength"
+      ],
+      "vol_history": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "UVXY": {
+      "category": "Volatility",
+      "price": 54.09,
+      "ma20": 43.57,
+      "above_ma20": "True",
+      "vol_ratio": 2.2,
+      "ret_1w": 36.42,
+      "ret_4w": 45.01,
+      "ret_8w": 57.93,
+      "ret_12w": 27.93,
+      "ret_20w": -10.6,
+      "rs_vs_spy": 47.65,
+      "signals": [
+        "volume_spike",
+        "breakout",
+        "relative_strength"
+      ],
+      "vol_history": [
+        25,
+        36,
+        50,
+        53,
+        45,
+        75,
+        57,
+        43,
+        51,
+        100
+      ]
+    },
+    "AMZN": {
+      "category": "Portfolio",
+      "price": 213.12,
+      "ma20": 227.54,
+      "above_ma20": "False",
+      "vol_ratio": 1.4,
+      "ret_1w": 1.49,
+      "ret_4w": 1.33,
+      "ret_8w": -13.85,
+      "ret_12w": -5.78,
+      "ret_20w": 0.04,
+      "rs_vs_spy": 3.97,
+      "signals": [
+        "relative_strength"
+      ],
+      "vol_history": [
+        28,
+        52,
+        48,
+        38,
+        48,
+        100,
+        88,
+        52,
+        57,
+        72
+      ]
+    },
+    "COST": {
+      "category": "Portfolio",
+      "price": 998.1,
+      "ma20": 934.39,
+      "above_ma20": "True",
+      "vol_ratio": 1.3,
+      "ret_1w": -1.26,
+      "ret_4w": -0.31,
+      "ret_8w": 7.92,
+      "ret_12w": 12.85,
+      "ret_20w": 6.75,
+      "rs_vs_spy": 2.34,
+      "signals": [],
+      "vol_history": [
+        45,
+        100,
+        88,
+        68,
+        69,
+        82,
+        68,
+        43,
+        64,
+        85
+      ]
+    },
+    "CRM": {
+      "category": "Portfolio",
+      "price": 202.11,
+      "ma20": 232.29,
+      "above_ma20": "False",
+      "vol_ratio": 1.3,
+      "ret_1w": 3.76,
+      "ret_4w": 5.62,
+      "ret_8w": -22.25,
+      "ret_12w": -22.8,
+      "ret_20w": -16.72,
+      "rs_vs_spy": 8.26,
+      "signals": [
+        "momentum_shift",
+        "relative_strength"
+      ],
+      "vol_history": [
+        22,
+        30,
+        56,
+        46,
+        58,
+        90,
+        77,
+        46,
+        100,
+        71
+      ]
+    },
+    "GOOG": {
+      "category": "Portfolio",
+      "price": 298.3,
+      "ma20": 308.45,
+      "above_ma20": "False",
+      "vol_ratio": 1.2,
+      "ret_1w": -4.22,
+      "ret_4w": -7.68,
+      "ret_8w": -9.37,
+      "ret_12w": -3.87,
+      "ret_20w": 17.61,
+      "rs_vs_spy": -5.03,
+      "signals": [],
+      "vol_history": [
+        33,
+        60,
+        61,
+        52,
+        57,
+        100,
+        72,
+        51,
+        63,
+        70
+      ]
+    },
+    "LLY": {
+      "category": "Portfolio",
+      "price": 990.33,
+      "ma20": 1017.98,
+      "above_ma20": "False",
+      "vol_ratio": 1.1,
+      "ret_1w": -5.86,
+      "ret_4w": -6.26,
+      "ret_8w": -6.73,
+      "ret_12w": -3.46,
+      "ret_20w": 23.74,
+      "rs_vs_spy": -3.61,
+      "signals": [],
+      "vol_history": [
+        25,
+        61,
+        52,
+        40,
+        49,
+        100,
+        57,
+        42,
+        61,
+        58
+      ]
+    },
+    "META": {
+      "category": "Portfolio",
+      "price": 644.86,
+      "ma20": 652.2,
+      "above_ma20": "False",
+      "vol_ratio": 1.1,
+      "ret_1w": -0.51,
+      "ret_4w": -2.51,
+      "ret_8w": -1.26,
+      "ret_12w": 0.18,
+      "ret_20w": -9.98,
+      "rs_vs_spy": 0.13,
+      "signals": [],
+      "vol_history": [
+        28,
+        43,
+        56,
+        53,
+        100,
+        58,
+        48,
+        37,
+        41,
+        52
+      ]
+    },
+    "MRK": {
+      "category": "Portfolio",
+      "price": 115.79,
+      "ma20": 105.27,
+      "above_ma20": "True",
+      "vol_ratio": 1.1,
+      "ret_1w": -6.49,
+      "ret_4w": -5.04,
+      "ret_8w": 4.76,
+      "ret_12w": 16.43,
+      "ret_20w": 37.73,
+      "rs_vs_spy": -2.39,
+      "signals": [],
+      "vol_history": [
+        31,
+        76,
+        57,
+        47,
+        56,
+        100,
+        61,
+        35,
+        56,
+        60
+      ]
+    },
+    "MSFT": {
+      "category": "Portfolio",
+      "price": 408.96,
+      "ma20": 461.68,
+      "above_ma20": "False",
+      "vol_ratio": 1.3,
+      "ret_1w": 4.13,
+      "ret_4w": 2.18,
+      "ret_8w": -14.48,
+      "ret_12w": -14.34,
+      "ret_20w": -20.04,
+      "rs_vs_spy": 4.82,
+      "signals": [
+        "relative_strength"
+      ],
+      "vol_history": [
+        23,
+        39,
+        49,
+        45,
+        100,
+        95,
+        73,
+        42,
+        73,
+        75
+      ]
+    },
+    "NKE": {
+      "category": "Portfolio",
+      "price": 57.01,
+      "ma20": 63.03,
+      "above_ma20": "False",
+      "vol_ratio": 1.3,
+      "ret_1w": -7.71,
+      "ret_4w": -10.22,
+      "ret_8w": -12.94,
+      "ret_12w": -14.94,
+      "ret_20w": -14.27,
+      "rs_vs_spy": -7.58,
+      "signals": [],
+      "vol_history": [
+        88,
+        100,
+        71,
+        60,
+        65,
+        72,
+        74,
+        67,
+        69,
+        100
+      ]
+    },
+    "NVDA": {
+      "category": "Portfolio",
+      "price": 177.88,
+      "ma20": 185.18,
+      "above_ma20": "False",
+      "vol_ratio": 1.4,
+      "ret_1w": 0.39,
+      "ret_4w": -4.06,
+      "ret_8w": -3.77,
+      "ret_12w": 1.64,
+      "ret_20w": -2.91,
+      "rs_vs_spy": -1.42,
+      "signals": [],
+      "vol_history": [
+        38,
+        64,
+        67,
+        56,
+        61,
+        80,
+        65,
+        50,
+        100,
+        90
+      ]
+    },
+    "TSLA": {
+      "category": "Portfolio",
+      "price": 396.73,
+      "ma20": 432.77,
+      "above_ma20": "False",
+      "vol_ratio": 1.3,
+      "ret_1w": -1.44,
+      "ret_4w": -3.5,
+      "ret_8w": -10.85,
+      "ret_12w": -13.56,
+      "ret_20w": -9.69,
+      "rs_vs_spy": -0.86,
+      "signals": [],
+      "vol_history": [
+        71,
+        93,
+        77,
+        71,
+        84,
+        89,
+        79,
+        59,
+        80,
+        100
+      ]
+    },
+    "UBER": {
+      "category": "Portfolio",
+      "price": 75.13,
+      "ma20": 83.36,
+      "above_ma20": "False",
+      "vol_ratio": 1.2,
+      "ret_1w": -0.38,
+      "ret_4w": 0.48,
+      "ret_8w": -12.07,
+      "ret_12w": -11.73,
+      "ret_20w": -18.6,
+      "rs_vs_spy": 3.12,
+      "signals": [
+        "relative_strength"
+      ],
+      "vol_history": [
+        26,
+        64,
+        49,
+        44,
+        64,
+        100,
+        74,
+        44,
+        62,
+        67
+      ]
+    },
+    "UNH": {
+      "category": "Portfolio",
+      "price": 286.48,
+      "ma20": 320.41,
+      "above_ma20": "False",
+      "vol_ratio": 1.0,
+      "ret_1w": -2.32,
+      "ret_4w": 3.55,
+      "ret_8w": -16.72,
+      "ret_12w": -15.63,
+      "ret_20w": -19.12,
+      "rs_vs_spy": 6.19,
+      "signals": [
+        "relative_strength"
+      ],
+      "vol_history": [
+        16,
+        27,
+        27,
+        26,
+        100,
+        44,
+        37,
+        20,
+        39,
+        34
+      ]
+    },
+    "V": {
+      "category": "Portfolio",
+      "price": 317.36,
+      "ma20": 333.11,
+      "above_ma20": "False",
+      "vol_ratio": 1.1,
+      "ret_1w": -0.87,
+      "ret_4w": -4.09,
+      "ret_8w": -9.08,
+      "ret_12w": -8.57,
+      "ret_20w": -6.8,
+      "rs_vs_spy": -1.45,
+      "signals": [],
+      "vol_history": [
+        27,
+        53,
+        100,
+        50,
+        72,
+        70,
+        73,
+        47,
+        85,
+        64
+      ]
+    },
+    "SPY": {
+      "category": "Portfolio",
+      "price": 672.38,
+      "ma20": 681.76,
+      "above_ma20": "False",
+      "vol_ratio": 1.6,
+      "ret_1w": -1.98,
+      "ret_4w": -2.64,
+      "ret_8w": -3.13,
+      "ret_12w": -1.08,
+      "ret_20w": 1.5,
+      "rs_vs_spy": 0.0,
+      "signals": [],
+      "vol_history": [
+        48,
+        63,
+        69,
+        66,
+        66,
+        87,
+        75,
+        55,
+        66,
+        100
+      ]
+    }
+  },
+  "previous_signaled": [
+    "UBER",
+    "USO",
+    "XLI",
+    "VGLT",
+    "COIN",
+    "DBC",
+    "TIP",
+    "WEAT",
+    "MSFT",
+    "UVXY",
+    "XLE",
+    "TLT",
+    "SLV",
+    "GDX",
+    "GLD",
+    "XLRE",
+    "GDXJ",
+    "UNH",
+    "XLU",
+    "CRM",
+    "HYG",
+    "XOP",
+    "BITO",
+    "AMZN",
+    "EEM",
+    "^VIX"
+  ]
+}
