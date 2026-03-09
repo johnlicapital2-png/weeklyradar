@@ -286,6 +286,18 @@ td.val-discount.disc-extreme { color: var(--red); text-shadow: 0 0 8px rgba(239,
 .val-detail-row .vd-value { font-family: var(--mono); }
 .val-interp { font-size: .8rem; color: var(--yellow); font-style: italic; margin-top: .3rem; padding: .4rem .6rem; background: rgba(234,179,8,.08); border-radius: 4px; }
 
+/* Valuation bar chart (GuruFocus style) */
+.val-bar-chart { display: flex; flex-direction: column; gap: .35rem; }
+.val-bar-row { display: flex; align-items: center; gap: .5rem; font-size: .82rem; }
+.val-bar-label { width: 110px; flex-shrink: 0; color: var(--text-dim); font-size: .75rem; text-align: right; }
+.val-bar-track { flex: 1; height: 18px; background: var(--bg); border-radius: 3px; position: relative; overflow: visible; }
+.val-bar-fill { height: 100%; border-radius: 3px; transition: width .3s; opacity: .7; }
+.val-bar-price-line { position: absolute; top: -3px; bottom: -3px; width: 2px; background: var(--text); opacity: .6; z-index: 2; }
+.val-bar-value { width: 75px; flex-shrink: 0; font-family: var(--mono); font-size: .78rem; text-align: right; }
+.val-bar-na { color: var(--text-dim); font-size: .75rem; font-style: italic; }
+.val-bar-legend { font-size: .72rem; color: var(--text-dim); margin-top: .4rem; display: flex; align-items: center; gap: .4rem; justify-content: flex-end; }
+.val-legend-line { display: inline-block; width: 16px; height: 2px; background: var(--text); opacity: .6; }
+
 /* ===== FOOTER ===== */
 footer {
   text-align: center;

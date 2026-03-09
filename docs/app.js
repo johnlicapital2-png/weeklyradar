@@ -210,8 +210,20 @@
     return v.toString();
   }
 
-  // ── Valuations ──
+  // ── Valuations (9-Method GuruFocus Style) ──
   let valFilter = 'all';
+
+  const VAL_METHODS = [
+    { key: 'epv', label: 'EPV' },
+    { key: 'ncav', label: 'NCAV' },
+    { key: 'tangible_book', label: 'Tangible Book' },
+    { key: 'projected_fcf', label: 'Projected FCF' },
+    { key: 'median_ps', label: 'Median PS' },
+    { key: 'graham_number', label: 'Graham Number' },
+    { key: 'peter_lynch', label: 'Peter Lynch' },
+    { key: 'dcf_fcf', label: 'DCF (FCF)' },
+    { key: 'dcf_earnings', label: 'DCF (Earnings)' },
+  ];
 
   function renderValuations() {
     const val = DATA.valuations;
@@ -219,7 +231,6 @@
     if (!val || !val.stocks || !val.stocks.length) { section.classList.add('hidden'); return; }
     section.classList.remove('hidden');
 
-    // Filters
     const filtersEl = document.getElementById('valuation-filters');
     if (!filtersEl.children.length) {
       ['Deep Value Only', 'Undervalued', 'All', 'Overvalued'].forEach(label => {
@@ -258,13 +269,10 @@
       tr.innerHTML = `
         <td><strong>${s.ticker}</strong></td>
         <td class="num">$${s.price ? s.price.toFixed(2) : '—'}</td>
-        <td class="num">$${s.composite_intrinsic ? s.composite_intrinsic.toFixed(2) : '—'}</td>
+        <td class="num">$${s.composite_median ? s.composite_median.toFixed(2) : '—'}</td>
         <td class="num val-discount ${discClass}">${dp >= 0 ? '+' : ''}${dp.toFixed(1)}%</td>
         <td>${s.signal_label || '—'}</td>
-        <td class="num hide-mobile">${s.dcf_value ? '$' + s.dcf_value.toFixed(0) : '—'}</td>
-        <td class="num hide-mobile">${s.epv_value ? '$' + s.epv_value.toFixed(0) : '—'}</td>
-        <td class="num hide-mobile">${s.hist_pe_value ? '$' + s.hist_pe_value.toFixed(0) : '—'}</td>
-        <td class="num hide-mobile">${s.implied_growth != null ? (s.implied_growth * 100).toFixed(1) + '%' : '—'}</td>
+        <td class="num hide-mobile">${s.methods_positive || 0}/${s.methods_total || 0}</td>
       `;
       tr.addEventListener('click', () => openValDetail(s));
       tbody.appendChild(tr);
@@ -286,11 +294,46 @@
       <div class="detail-category">${s.name || ''}</div>
       <div class="detail-grid">
         <div class="detail-stat"><div class="label">Price</div><div class="value">$${s.price?.toFixed(2) || '—'}</div></div>
-        <div class="detail-stat"><div class="label">Intrinsic Value</div><div class="value val-discount ${discClass}">$${s.composite_intrinsic?.toFixed(2) || '—'}</div></div>
+        <div class="detail-stat"><div class="label">Median IV</div><div class="value val-discount ${discClass}">$${s.composite_median?.toFixed(2) || '—'}</div></div>
         <div class="detail-stat"><div class="label">Discount</div><div class="value val-discount ${discClass}">${dp >= 0 ? '+' : ''}${dp.toFixed(1)}%</div></div>
         <div class="detail-stat"><div class="label">Signal</div><div class="value">${s.signal_label || '—'}</div></div>
       </div>
     `;
+
+    // Bar chart (GuruFocus style)
+    const price = s.price || 0;
+    // Find max absolute value for scaling
+    let maxVal = price;
+    VAL_METHODS.forEach(m => {
+      const v = s[m.key];
+      if (v != null && Math.abs(v) > maxVal) maxVal = Math.abs(v);
+    });
+    maxVal = maxVal * 1.1; // padding
+
+    html += `<div class="val-detail-section"><h4>📐 Valuation Methods</h4>`;
+    html += `<div class="val-bar-chart">`;
+    VAL_METHODS.forEach(m => {
+      const v = s[m.key];
+      if (v == null) {
+        html += `<div class="val-bar-row"><span class="val-bar-label">${m.label}</span><span class="val-bar-na">N/A</span></div>`;
+        return;
+      }
+      const pct = Math.max(0, Math.min(100, (Math.abs(v) / maxVal) * 100));
+      const isUnder = v > price;
+      const barColor = isUnder ? 'var(--green)' : 'var(--red)';
+      const sign = v < 0 ? '-' : '';
+      html += `<div class="val-bar-row">
+        <span class="val-bar-label">${m.label}</span>
+        <div class="val-bar-track">
+          <div class="val-bar-fill" style="width:${pct}%;background:${barColor}"></div>
+          <div class="val-bar-price-line" style="left:${(price/maxVal)*100}%"></div>
+        </div>
+        <span class="val-bar-value" style="color:${barColor}">${sign}$${Math.abs(v).toFixed(2)}</span>
+      </div>`;
+    });
+    html += `</div>`;
+    html += `<div class="val-bar-legend"><span class="val-legend-line"></span> Current Price ($${price.toFixed(2)})</div>`;
+    html += `</div>`;
 
     // Key inputs
     html += `<div class="val-detail-section"><h4>📊 Key Inputs</h4>`;
@@ -301,30 +344,7 @@
     html += `<div class="val-detail-row"><span class="vd-label">Market Cap</span><span class="vd-value">${fmtB(s.market_cap)}</span></div>`;
     html += `</div>`;
 
-    // Method breakdown
-    html += `<div class="val-detail-section"><h4>📐 Valuation Methods</h4>`;
-    html += `<div class="val-detail-row"><span class="vd-label">DCF</span><span class="vd-value">${s.dcf_value ? '$' + s.dcf_value.toFixed(2) : 'N/A'}</span></div>`;
-    html += `<div class="val-detail-row"><span class="vd-label">EPV (no-growth)</span><span class="vd-value">${s.epv_value ? '$' + s.epv_value.toFixed(2) : 'N/A'}</span></div>`;
-    html += `<div class="val-detail-row"><span class="vd-label">Historical P/E</span><span class="vd-value">${s.hist_pe_value ? '$' + s.hist_pe_value.toFixed(2) : 'N/A'}</span></div>`;
-    if (s.current_pe || s.estimated_avg_pe) {
-      html += `<div class="val-detail-row"><span class="vd-label">P/E (current → avg)</span><span class="vd-value">${s.current_pe?.toFixed(1) || '?'} → ${s.estimated_avg_pe?.toFixed(1) || '?'}</span></div>`;
-    }
-    html += `</div>`;
-
-    // Reverse DCF
-    if (s.implied_growth != null) {
-      html += `<div class="val-detail-section"><h4>🔄 Reverse DCF</h4>`;
-      html += `<div class="val-detail-row"><span class="vd-label">Implied Growth</span><span class="vd-value">${(s.implied_growth*100).toFixed(1)}%</span></div>`;
-      if (s.implied_growth_interp) {
-        html += `<div class="val-interp">${s.implied_growth_interp}</div>`;
-      }
-      if (s.growth_rate && s.implied_growth < 0 && s.growth_rate > 0.05) {
-        html += `<div class="val-interp">💡 Market implies ${(s.implied_growth*100).toFixed(1)}% growth — unlikely for a company growing at ${(s.growth_rate*100).toFixed(0)}%</div>`;
-      }
-      html += `</div>`;
-    }
-
-    html += `<div style="margin-top:1rem;font-size:.75rem;color:var(--text-dim)">Methods used: ${s.methods_used} · Composite = average of available methods</div>`;
+    html += `<div style="margin-top:1rem;font-size:.75rem;color:var(--text-dim)">Positive methods: ${s.methods_positive}/${s.methods_total} · Composite = median of positive methods</div>`;
 
     content.innerHTML = html;
     panel.classList.add('open');
